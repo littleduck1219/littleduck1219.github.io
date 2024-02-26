@@ -9,8 +9,8 @@ const Introduction: FunctionComponent = function () {
         <ProfileImage />
 
         <div>
-          <SubTitle>Nice to Meet You,</SubTitle>
-          <Title>I'm Junior Frontend Developer Duck.</Title>
+          <SubTitle>성장하는 나의 이야기,</SubTitle>
+          <Title>Duck's Blog</Title>
         </div>
       </Wrapper>
     </Background>
