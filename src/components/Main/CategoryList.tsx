@@ -59,3 +59,4 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
     margin-right: 0;
   }
 `
+//ㅇㄴㄹ
