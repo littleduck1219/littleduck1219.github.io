@@ -1,7 +1,7 @@
-import React, { FunctionComponent } from 'react'
-import styled from '@emotion/styled'
+import React, { FunctionComponent } from 'react';
+import styled from '@emotion/styled';
 
-const FooterWrapper = styled.div`
+const FooterWrapper = styled.footer`
   display: grid;
   place-items: center;
   margin-top: auto;
@@ -13,7 +13,7 @@ const FooterWrapper = styled.div`
   @media (max-width: 768px) {
     font-size: 13px;
   }
-`
+`;
 
 const Footer: FunctionComponent = function () {
   return (
@@ -21,7 +21,7 @@ const Footer: FunctionComponent = function () {
       Thank You for Visiting My Blog, Have a Good Day 😆
       <br />© 2024 Developer Duck, Powered By Gatsby.
     </FooterWrapper>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

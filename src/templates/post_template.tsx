@@ -1,22 +1,45 @@
-import React, { FunctionComponent } from 'react'
-import { graphql } from 'gatsby'
-import { PostPageItemType } from 'types/PostItem.types'
-import Template from 'components/Common/Template'
-import PostHead from 'components/Post/PostHead'
-import PostContent from 'components/Post/PostContent'
+import React, { FunctionComponent } from 'react';
+import { graphql } from 'gatsby';
+import Template from 'components/Common/Template';
+import PostHead from 'components/Post/PostHead';
+import PostContent from 'components/Post/PostContent';
+import CommentWidget from 'components/Post/CommentWidget';
+import { FluidObject } from 'gatsby-image';
 
-type PostTemplateProps = {
+interface PostTemplateProps {
   data: {
     allMarkdownRemark: {
-      edges: PostPageItemType[] // 존재하지 않는 타입이므로 에러가 발생하지만 일단 작성해주세요
-    }
-  }
+      edges: [
+        {
+          node: {
+            html: string;
+            frontmatter: {
+              title: string;
+              summary: string;
+              date: string;
+              categories: string[];
+              thumbnail: {
+                childImageSharp: {
+                  fluid: FluidObject;
+                };
+                publicURL: string;
+              };
+            };
+          };
+        },
+      ];
+    };
+  };
+  location: {
+    href: string;
+  };
 }
 
 const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   data: {
     allMarkdownRemark: { edges },
   },
+  location: { href },
 }) {
   const {
     node: {
@@ -27,25 +50,28 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
         date,
         categories,
         thumbnail: {
-          childImageSharp: { gatsbyImageData },
+          childImageSharp: { fluid },
+          publicURL,
         },
       },
     },
-  } = edges[0]
+  } = edges[0];
 
   return (
-    <Template>
+    <Template title={title} description={summary} url={href} image={publicURL}>
       <PostHead
         title={title}
         date={date}
         categories={categories}
-        thumbnail={gatsbyImageData}
+        thumbnail={fluid}
       />
       <PostContent html={html} />
+      <CommentWidget />
     </Template>
-  )
-}
-export default PostTemplate
+  );
+};
+
+export default PostTemplate;
 
 export const queryMarkdownDataBySlug = graphql`
   query queryMarkdownDataBySlug($slug: String) {
@@ -60,12 +86,15 @@ export const queryMarkdownDataBySlug = graphql`
             categories
             thumbnail {
               childImageSharp {
-                gatsbyImageData
+                fluid(fit: INSIDE, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
               }
+              publicURL
             }
           }
         }
       }
     }
   }
-`
+`;

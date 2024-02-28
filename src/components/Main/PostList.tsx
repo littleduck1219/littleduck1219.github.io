@@ -1,64 +1,35 @@
-import React, { FunctionComponent, useMemo } from 'react'
-import styled from '@emotion/styled'
-import PostItem from 'components/Main/PostItem'
-import { PostListItemType } from 'model/PostItem'
+import React, { FunctionComponent } from 'react';
+import styled from '@emotion/styled';
+import PostItem from 'components/Main/PostItem';
 import useInfiniteScroll, {
   useInfiniteScrollType,
-} from 'hooks/useInfiniteScroll'
-import { FluidObject } from 'gatsby-image'
+} from 'hooks/useInfiniteScroll';
+import { FluidObject } from 'gatsby-image';
 
 export type PostType = {
   node: {
-    id: string
+    id: string;
     fields: {
-      slug: string
-    }
+      slug: string;
+    };
     frontmatter: {
-      title: string
-      summary: string
-      date: string
-      categories: string[]
+      title: string;
+      summary: string;
+      date: string;
+      categories: string[];
       thumbnail: {
         childImageSharp: {
-          fluid: FluidObject
-        }
-      }
-    }
-  }
+          fluid: FluidObject;
+        };
+      };
+    };
+  };
+};
+
+interface PostListProps {
+  selectedCategory: string;
+  posts: PostType[];
 }
-
-type PostListProps = {
-  selectedCategory: string
-  posts: PostListItemType[]
-}
-
-const PostList: FunctionComponent<PostListProps> = function ({
-  selectedCategory,
-  posts,
-}) {
-  const { containerRef, postList }: useInfiniteScrollType = useInfiniteScroll(
-    selectedCategory,
-    posts,
-  )
-
-  return (
-    <PostListWrapper ref={containerRef}>
-      {postList.map(
-        ({
-          node: {
-            id,
-            fields: { slug },
-            frontmatter,
-          },
-        }: PostListItemType) => (
-          <PostItem {...frontmatter} link={slug} key={id} />
-        ),
-      )}
-    </PostListWrapper>
-  )
-}
-
-export default PostList
 
 const PostListWrapper = styled.div`
   display: grid;
@@ -73,4 +44,32 @@ const PostListWrapper = styled.div`
     width: 100%;
     padding: 50px 20px;
   }
-`
+`;
+
+const PostList: FunctionComponent<PostListProps> = function ({
+  selectedCategory,
+  posts,
+}) {
+  const { containerRef, postList }: useInfiniteScrollType = useInfiniteScroll(
+    selectedCategory,
+    posts,
+  );
+
+  return (
+    <PostListWrapper ref={containerRef}>
+      {postList.map(
+        ({
+          node: {
+            id,
+            fields: { slug },
+            frontmatter,
+          },
+        }: PostType) => (
+          <PostItem {...frontmatter} link={slug} key={id} />
+        ),
+      )}
+    </PostListWrapper>
+  );
+};
+
+export default PostList;

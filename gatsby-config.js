@@ -1,38 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `주니어 개발자의 개발 블로그`,
-    description: `주니어 개발자로서의 저를 표현한 블로그입니다.`,
+    title: `Duck's blog`,
+    description: `성장하을 기록하는 블로그 입니다.`,
     author: `Duck`,
     siteUrl: 'https://littleduck1219.github.io/',
   },
   plugins: [
-    // LazyLoadingPlugin
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `contents`,
-        path: `${__dirname}/contents`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `static`,
-        path: `${__dirname}/static`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        defaults: {
-          formats: ['auto', 'webp'],
-          quality: 100,
-          placeholder: 'blurred',
-        },
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-image`,
     {
       resolve: 'gatsby-plugin-typescript',
       options: {
@@ -47,6 +20,13 @@ module.exports = {
       options: {
         name: `contents`,
         path: `${__dirname}/contents`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/static`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -73,6 +53,7 @@ module.exports = {
               maxWidth: 768,
               quality: 100,
               withWebp: true,
+              wrapperStyle: () => '',
             },
           },
           {
@@ -89,5 +70,19 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://littleduck1219.github.io/',
+        stripQueryString: true,
+      },
+    },
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
   ],
-}
+};

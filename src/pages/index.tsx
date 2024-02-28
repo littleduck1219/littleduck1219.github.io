@@ -1,34 +1,34 @@
-import React, { FunctionComponent, useMemo } from 'react'
-import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
-import Introduction from 'components/Main/Introduction'
-import PostList, { PostType } from 'components/Main/PostList'
-import { ProfileImageProps } from 'components/Main/ProfileImage'
-import { graphql } from 'gatsby'
-import queryString, { ParsedQuery } from 'query-string'
-import Template from 'components/Common/Template'
+import React, { FunctionComponent, useMemo } from 'react';
+import Template from 'components/Common/Template';
+import CategoryList, { CategoryListProps } from 'components/Main/CategoryList';
+import Introduction from 'components/Main/Introduction';
+import PostList, { PostType } from 'components/Main/PostList';
+import { ProfileImageProps } from 'components/Main/ProfileImage';
+import { graphql } from 'gatsby';
+import queryString, { ParsedQuery } from 'query-string';
 
 interface IndexPageProps {
   location: {
-    search: string
-  }
+    search: string;
+  };
   data: {
     site: {
       siteMetadata: {
-        title: string
-        description: string
-        siteUrl: string
-      }
-    }
+        title: string;
+        description: string;
+        siteUrl: string;
+      };
+    };
     allMarkdownRemark: {
-      edges: PostType[]
-    }
+      edges: PostType[];
+    };
     file: {
-      publicURL: string
+      publicURL: string;
       childImageSharp: {
-        fluid: ProfileImageProps['profileImage']
-      }
-    }
-  }
+        fluid: ProfileImageProps['profileImage'];
+      };
+    };
+  };
 }
 
 const IndexPage: FunctionComponent<IndexPageProps> = function ({
@@ -44,11 +44,11 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
     },
   },
 }) {
-  const parsed: ParsedQuery<string> = queryString.parse(search)
+  const parsed: ParsedQuery<string> = queryString.parse(search);
   const selectedCategory: string =
     typeof parsed.category !== 'string' || !parsed.category
       ? 'All'
-      : parsed.category
+      : parsed.category;
 
   const categoryList = useMemo(
     () =>
@@ -62,18 +62,18 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
           }: PostType,
         ) => {
           categories.forEach(category => {
-            if (list[category] === undefined) list[category] = 1
-            else list[category]++
-          })
+            if (list[category] === undefined) list[category] = 1;
+            else list[category]++;
+          });
 
-          list['All']++
+          list['All']++;
 
-          return list
+          return list;
         },
         { All: 0 },
       ),
     [],
-  )
+  );
 
   return (
     <Template
@@ -89,10 +89,10 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       />
       <PostList selectedCategory={selectedCategory} posts={edges} />
     </Template>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const getPostList = graphql`
   query getPostList {
@@ -142,4 +142,4 @@ export const getPostList = graphql`
       }
     }
   }
-`
+`;
