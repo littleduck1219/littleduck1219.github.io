@@ -6,7 +6,11 @@ summary: 'haar cascades을 사용하여 얼굴감지'
 thumbnail: './haar_cascades_face_detection_6.png'
 ---
 
+<center>
+
 ## Eye Detection - haar cascades
+
+</br>
 
 지난 글에 이어서 face detec와 함께 eye detect를 해보도록 하겠습니다.
 
@@ -20,6 +24,7 @@ thumbnail: './haar_cascades_face_detection_6.png'
 </p>
 
 </br>
+</center>
 
 ```python
 import cv2

@@ -6,6 +6,8 @@ summary: 'YOLOv7을 이용해서 동물 데이터 셋을 사용하여 동물 종
 thumbnail: './haar_cascades_face_detection_6.png'
 ---
 
+<center>
+
 ## mini project:YOLOv7 animal detect
 
 </br>
