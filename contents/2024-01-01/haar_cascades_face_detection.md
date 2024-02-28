@@ -12,7 +12,7 @@ harr cascade를 이용하여 얼굴을 감지해 보도록 하겠습니다.
 
 데이터는 beautiful free image에서 한 장 가져왔습니다.
 
-![Attached Photo 1](./haar_cascades_face_detection_1.jpeg)
+![Attached Photo 1](https://drive.google.com/uc?export=view&id=10LHh4vradq1gli6P2CDyuc8eRt00wTSi)
 
 </center>
 
