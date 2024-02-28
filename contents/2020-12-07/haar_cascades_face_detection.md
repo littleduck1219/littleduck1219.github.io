@@ -1,5 +1,5 @@
 ---
-date: '2024-02-28'
+date: '2023-01-01'
 title: 'Face Detection - haar cascades'
 categories: ['DataScience']
 summary: 'haar cascades을 사용하여 얼굴감지'
