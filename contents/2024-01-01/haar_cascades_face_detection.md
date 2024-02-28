@@ -1,5 +1,5 @@
 ---
-date: '2023-01-01'
+date: '2024-01-01'
 title: 'Face Detection - haar cascades'
 categories: ['DataScience']
 summary: 'haar cascades을 사용하여 얼굴감지'
@@ -7,7 +7,6 @@ thumbnail: './haar_cascades_face_detection_6.png'
 ---
 
 <center>
-<br>
 
 harr cascade를 이용하여 얼굴을 감지해 보도록 하겠습니다.
 
