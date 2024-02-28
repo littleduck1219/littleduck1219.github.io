@@ -1,17 +1,64 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, useMemo } from 'react'
 import styled from '@emotion/styled'
 import PostItem from 'components/Main/PostItem'
+import { PostListItemType } from 'model/PostItem'
+import useInfiniteScroll, {
+  useInfiniteScrollType,
+} from 'hooks/useInfiniteScroll'
+import { FluidObject } from 'gatsby-image'
 
-const POST_ITEM_DATA = {
-  title: 'Post Item Title',
-  date: '2020.01.29.',
-  categories: ['Web', 'Frontend', 'Testing'],
-  summary:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident repellat doloremque fugit quis rem temporibus! Maxime molestias, suntrem debitis odit harum impedit. Modi cupiditate harum dignissimos eos in corrupti!',
-  thumbnail:
-    'https://ji5485.github.io/static/e4f34c558ae8e8235ff53b0311085796/4d854/javascript-core-concept-summary-function-1.webp',
-  link: 'https://www.google.co.kr/',
+export type PostType = {
+  node: {
+    id: string
+    fields: {
+      slug: string
+    }
+    frontmatter: {
+      title: string
+      summary: string
+      date: string
+      categories: string[]
+      thumbnail: {
+        childImageSharp: {
+          fluid: FluidObject
+        }
+      }
+    }
+  }
 }
+
+type PostListProps = {
+  selectedCategory: string
+  posts: PostListItemType[]
+}
+
+const PostList: FunctionComponent<PostListProps> = function ({
+  selectedCategory,
+  posts,
+}) {
+  const { containerRef, postList }: useInfiniteScrollType = useInfiniteScroll(
+    selectedCategory,
+    posts,
+  )
+
+  return (
+    <PostListWrapper ref={containerRef}>
+      {postList.map(
+        ({
+          node: {
+            id,
+            fields: { slug },
+            frontmatter,
+          },
+        }: PostListItemType) => (
+          <PostItem {...frontmatter} link={slug} key={id} />
+        ),
+      )}
+    </PostListWrapper>
+  )
+}
+
+export default PostList
 
 const PostListWrapper = styled.div`
   display: grid;
@@ -27,16 +74,3 @@ const PostListWrapper = styled.div`
     padding: 50px 20px;
   }
 `
-
-const PostList: FunctionComponent = function () {
-  return (
-    <PostListWrapper>
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-    </PostListWrapper>
-  )
-}
-
-export default PostList

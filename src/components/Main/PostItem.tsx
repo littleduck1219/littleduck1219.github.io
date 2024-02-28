@@ -1,27 +1,22 @@
 import React, { FunctionComponent } from 'react'
 import * as Style from './style.PostItem'
+import { PostFrontmatterType } from 'model/PostItem'
 
-type PostItemProps = {
-  title: string
-  date: string
-  categories: string[]
-  summary: string
-  thumbnail: string
-  link: string
-}
+type PostItemProps = PostFrontmatterType & { link: string }
 
 const PostItem: FunctionComponent<PostItemProps> = function ({
   title,
   date,
   categories,
   summary,
-  thumbnail,
+  thumbnail: {
+    childImageSharp: { gatsbyImageData },
+  },
   link,
 }) {
   return (
     <Style.PostItemWrapper to={link}>
-      <Style.ThumbnailImage src={thumbnail} alt="Post Item Image" />
-
+      <Style.ThumbnailImage image={gatsbyImageData} alt="Post Item Image" />
       <Style.PostItemContent>
         <Style.Title>{title}</Style.Title>
         <Style.Date>{date}</Style.Date>
