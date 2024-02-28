@@ -12,7 +12,7 @@ thumbnail: './haar_cascades_eye_detection_2.png'
 
 </br>
 
-지난 글에 이어서 face detec와 함께 eye detect를 해보도록 하겠습니다.
+지난 글에 이어서 face detect와 함께 eye detect를 해보도록 하겠습니다.
 
 </br>
 
