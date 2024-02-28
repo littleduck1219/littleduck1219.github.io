@@ -3,7 +3,7 @@ date: '2024-01-02'
 title: 'Eye Detection - haar cascades'
 categories: ['DataScience']
 summary: 'haar cascades을 사용하여 얼굴감지'
-thumbnail: './haar_cascades_face_detection_6.png'
+thumbnail: './haar_cascades_eye_detection_2.png'
 ---
 
 <center>
