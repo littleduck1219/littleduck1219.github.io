@@ -3,7 +3,7 @@ date: '2024-01-01'
 title: 'Face Detection - haar cascades'
 categories: ['DataScience']
 summary: 'haar cascades을 사용하여 얼굴감지'
-thumbnail: 'https://1drv.ms/i/c/bae70a53437eb109/IQP1EQ7YEgxVTbP1czh1psLEAezMuNS5J-2vevHD0LR90ls?width=1024'
+thumbnail: './haar_cascades_face_detection_6.png'
 ---
 
 <center>

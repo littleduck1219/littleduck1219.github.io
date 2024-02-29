@@ -1,136 +1,47 @@
-import React, { FunctionComponent } from 'react';
-import styled from '@emotion/styled';
+import React, { FunctionComponent, useEffect, useState } from 'react';
+import * as style from './style.PostContent';
+import { PostContentProps } from 'model/post';
+import Spinner from 'components/Common/Spinner';
 
-interface PostContentProps {
-  html: string;
-}
+const PostContent: FunctionComponent<PostContentProps> = ({ html }) => {
+  const [loading, setLoading] = useState(true);
 
-const MarkdownRenderer = styled.div`
-  // Renderer Style
-  display: flex;
-  flex-direction: column;
-  width: 800px;
-  margin: 0 auto;
-  padding: 100px 0;
-  word-break: break-all;
+  useEffect(() => {
+    const images = document.querySelectorAll('img');
+    const totalImages = images.length;
+    let loadedImages = 0;
 
-  // Markdown Style
-  line-height: 1.8;
-  font-size: 16px;
-  font-weight: 400;
+    const imageLoaded = () => {
+      loadedImages++;
+      if (loadedImages === totalImages) {
+        setLoading(false);
+      }
+    };
 
-  // Apply Padding Attribute to All Elements
-  p {
-    padding: 3px 0;
-  }
+    images.forEach(image => {
+      if (image.complete) {
+        imageLoaded();
+      } else {
+        image.addEventListener('load', imageLoaded);
+        image.addEventListener('error', imageLoaded);
+      }
+    });
 
-  // Adjust Heading Element Style
-  h1,
-  h2,
-  h3 {
-    font-weight: 800;
-    margin-bottom: 30px;
-  }
-
-  * + h1,
-  * + h2,
-  * + h3 {
-    margin-top: 80px;
-  }
-
-  hr + h1,
-  hr + h2,
-  hr + h3 {
-    margin-top: 0;
-  }
-
-  h1 {
-    font-size: 30px;
-  }
-
-  h2 {
-    font-size: 25px;
-  }
-
-  h3 {
-    font-size: 20px;
-  }
-
-  // Adjust Quotation Element Style
-  blockquote {
-    margin: 30px 0;
-    padding: 5px 15px;
-    border-left: 2px solid #000000;
-    font-weight: 800;
-  }
-
-  // Adjust List Element Style
-  ol,
-  ul {
-    margin-left: 20px;
-    padding: 30px 0;
-  }
-
-  // Adjust Horizontal Rule style
-  hr {
-    border: 1px solid #000000;
-    margin: 100px 0;
-  }
-
-  // Adjust Link Element Style
-  a {
-    color: #4263eb;
-    text-decoration: underline;
-  }
-
-  // Adjust Code Style
-  pre[class*='language-'] {
-    margin: 30px 0;
-    padding: 15px;
-    font-size: 15px;
-
-    ::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.5);
-      border-radius: 3px;
+    // 모든 이미지가 이미 로드된 경우
+    if (totalImages === 0) {
+      setLoading(false);
     }
-  }
+  }, [html]);
 
-  code[class*='language-'],
-  pre[class*='language-'] {
-    tab-size: 2;
-  }
-
-  // Markdown Responsive Design
-  @media (max-width: 768px) {
-    width: 100%;
-    padding: 80px 20px;
-    line-height: 1.6;
-    font-size: 14px;
-
-    h1 {
-      font-size: 23px;
-    }
-
-    h2 {
-      font-size: 20px;
-    }
-
-    h3 {
-      font-size: 17px;
-    }
-
-    img {
-      width: 100%;
-    }
-
-    hr {
-      margin: 50px 0;
-    }
-  }
-`;
-
-const PostContent: FunctionComponent<PostContentProps> = function ({ html }) {
-  return <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />;
+  return (
+    <>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <style.MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />
+      )}
+    </>
+  );
 };
 
 export default PostContent;
