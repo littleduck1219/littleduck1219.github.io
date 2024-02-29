@@ -1,32 +1,19 @@
-import React, { FunctionComponent, ReactNode } from 'react';
-import styled from '@emotion/styled';
+import React from 'react';
 import GlobalStyle from 'components/Common/GlobalStyle';
 import Footer from 'components/Common/Footer';
 import { Helmet } from 'react-helmet';
+import * as style from './style.Template';
+import { TemplateProps } from 'model/common';
 
-interface TemplateProps {
-  title: string;
-  description: string;
-  url: string;
-  image: string;
-  children: ReactNode;
-}
-
-const Container = styled.main`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`;
-
-const Template: FunctionComponent<TemplateProps> = function ({
+export default function Template({
   title,
   description,
   url,
   image,
   children,
-}) {
+}: TemplateProps): JSX.Element {
   return (
-    <Container>
+    <style.Container>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -57,8 +44,6 @@ const Template: FunctionComponent<TemplateProps> = function ({
       <GlobalStyle />
       {children}
       <Footer />
-    </Container>
+    </style.Container>
   );
-};
-
-export default Template;
+}

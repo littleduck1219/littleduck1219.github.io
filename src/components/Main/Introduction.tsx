@@ -1,64 +1,19 @@
-import React, { FunctionComponent } from 'react';
-import styled from '@emotion/styled';
+import React from 'react';
 import ProfileImage, { ProfileImageProps } from 'components/Main/ProfileImage';
+import * as style from './style.Introduce';
 
 type IntroductionProps = ProfileImageProps;
 
-const Background = styled.div`
-  width: 100%;
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  color: #ffffff;
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 768px;
-  height: 400px;
-  margin: 0 auto;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 300px;
-    padding: 0 20px;
-  }
-`;
-
-const SubTitle = styled.div`
-  font-size: 20px;
-  font-weight: 400;
-
-  @media (max-width: 768px) {
-    font-size: 15px;
-  }
-`;
-
-const Title = styled.div`
-  margin-top: 5px;
-  font-size: 35px;
-  font-weight: 700;
-
-  @media (max-width: 768px) {
-    font-size: 25px;
-  }
-`;
-
-const Introduction: FunctionComponent<IntroductionProps> = function ({
-  profileImage,
-}) {
+export default function Introduction({ profileImage }: IntroductionProps) {
   return (
-    <Background>
-      <Wrapper>
+    <style.Background>
+      <style.Wrapper>
         <ProfileImage profileImage={profileImage} />
         <div>
-          <SubTitle>나의 성장 일기</SubTitle>
-          <Title>프론트엔드 개발자 박경덕 입니다.</Title>
+          <style.SubTitle>나의 성장 일기</style.SubTitle>
+          <style.Title>프론트엔드 개발자 박경덕 입니다.</style.Title>
         </div>
-      </Wrapper>
-    </Background>
+      </style.Wrapper>
+    </style.Background>
   );
-};
-
-export default Introduction;
+}

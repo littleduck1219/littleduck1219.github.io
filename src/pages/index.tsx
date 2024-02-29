@@ -1,35 +1,12 @@
 import React, { FunctionComponent, useMemo } from 'react';
 import Template from 'components/Common/Template';
-import CategoryList, { CategoryListProps } from 'components/Main/CategoryList';
+import CategoryList from 'components/Main/CategoryList';
 import Introduction from 'components/Main/Introduction';
-import PostList, { PostType } from 'components/Main/PostList';
-import { ProfileImageProps } from 'components/Main/ProfileImage';
+import PostList from 'components/Main/PostList';
 import { graphql } from 'gatsby';
 import queryString, { ParsedQuery } from 'query-string';
-
-interface IndexPageProps {
-  location: {
-    search: string;
-  };
-  data: {
-    site: {
-      siteMetadata: {
-        title: string;
-        description: string;
-        siteUrl: string;
-      };
-    };
-    allMarkdownRemark: {
-      edges: PostType[];
-    };
-    file: {
-      publicURL: string;
-      childImageSharp: {
-        fluid: ProfileImageProps['profileImage'];
-      };
-    };
-  };
-}
+import { IndexPageProps } from 'model/index';
+import { CategoryListProps, PostType } from 'model/main';
 
 const IndexPage: FunctionComponent<IndexPageProps> = function ({
   location: { search },

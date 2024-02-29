@@ -4,36 +4,7 @@ import Template from 'components/Common/Template';
 import PostHead from 'components/Post/PostHead';
 import PostContent from 'components/Post/PostContent';
 import CommentWidget from 'components/Post/CommentWidget';
-import { FluidObject } from 'gatsby-image';
-
-interface PostTemplateProps {
-  data: {
-    allMarkdownRemark: {
-      edges: [
-        {
-          node: {
-            html: string;
-            frontmatter: {
-              title: string;
-              summary: string;
-              date: string;
-              categories: string[];
-              thumbnail: {
-                childImageSharp: {
-                  fluid: FluidObject;
-                };
-                publicURL: string;
-              };
-            };
-          };
-        },
-      ];
-    };
-  };
-  location: {
-    href: string;
-  };
-}
+import { PostTemplateProps } from 'model/post';
 
 const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   data: {

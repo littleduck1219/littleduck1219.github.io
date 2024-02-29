@@ -22,3 +22,33 @@ export interface PostHeadInfoProps {
 export interface PostContentProps {
   html: string;
 }
+
+// PostTemplate
+export interface PostTemplateProps {
+  data: {
+    allMarkdownRemark: {
+      edges: [
+        {
+          node: {
+            html: string;
+            frontmatter: {
+              title: string;
+              summary: string;
+              date: string;
+              categories: string[];
+              thumbnail: {
+                childImageSharp: {
+                  fluid: FluidObject;
+                };
+                publicURL: string;
+              };
+            };
+          };
+        },
+      ];
+    };
+  };
+  location: {
+    href: string;
+  };
+}
