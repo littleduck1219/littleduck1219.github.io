@@ -8,7 +8,7 @@ thumbnail: './Inheritance_of_Fixed_objects_2.png'
 
 <center>
 
-![Attached Photo 1](./Inheritance_of_Fixed_objects_1.png)
+![1](https://1drv.ms/i/c/bae70a53437eb109/IQNAwh3RgfsLRbwT6GTwZOXAARqIrMGRnRBxLxu1UdhQLzM?width=1280&height=805)
 
 </center>
 
@@ -35,6 +35,6 @@ thumbnail: './Inheritance_of_Fixed_objects_2.png'
 
 <center>
 
-![Attached Photo 1](./Inheritance_of_Fixed_objects_2.png)
+![2](https://1drv.ms/i/c/bae70a53437eb109/IQNYNVDxdoC3SbxMXifSmSixAbkQT1w2G_N4BC6JWEuc2f0?width=1280&height=805)
 
 </center>
