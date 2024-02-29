@@ -1,3 +1,5 @@
+import { PostType, ProfileImageProps } from './main';
+
 export interface IndexPageProps {
   location: {
     search: string;

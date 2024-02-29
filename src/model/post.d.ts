@@ -52,3 +52,14 @@ export interface PostTemplateProps {
     href: string;
   };
 }
+
+// CommentWidget
+export interface UtterancesConfigType {
+  src: string;
+  repo: string;
+  'issue-term': string;
+  label: string;
+  theme: string;
+  crossorigin: string;
+  async: string;
+}

@@ -59,3 +59,8 @@ export interface PostListProps {
   selectedCategory: string;
   posts: PostType[];
 }
+
+// ProfileImage
+export interface ProfileImageProps {
+  profileImage: FluidObject;
+}

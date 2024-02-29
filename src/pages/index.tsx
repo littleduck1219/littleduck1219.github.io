@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import Template from 'components/Common/Template';
 import CategoryList from 'components/Main/CategoryList';
 import Introduction from 'components/Main/Introduction';
@@ -7,8 +7,9 @@ import { graphql } from 'gatsby';
 import queryString, { ParsedQuery } from 'query-string';
 import { IndexPageProps } from 'model/index';
 import { CategoryListProps, PostType } from 'model/main';
+import Notice from 'components/Common/Notice';
 
-const IndexPage: FunctionComponent<IndexPageProps> = function ({
+export default function IndexPage({
   location: { search },
   data: {
     site: {
@@ -20,7 +21,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       childImageSharp: { fluid },
     },
   },
-}) {
+}: IndexPageProps) {
   const parsed: ParsedQuery<string> = queryString.parse(search);
   const selectedCategory: string =
     typeof parsed.category !== 'string' || !parsed.category
@@ -60,6 +61,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       image={publicURL}
     >
       <Introduction profileImage={fluid} />
+      {/* <Notice /> */}
       <CategoryList
         selectedCategory={selectedCategory}
         categoryList={categoryList}
@@ -67,9 +69,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       <PostList selectedCategory={selectedCategory} posts={edges} />
     </Template>
   );
-};
-
-export default IndexPage;
+}
 
 export const getPostList = graphql`
   query getPostList {

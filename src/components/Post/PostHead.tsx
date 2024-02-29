@@ -1,14 +1,14 @@
-import React, { FunctionComponent } from 'react';
+import React from 'react';
 import PostHeadInfo from 'components/Post/PostHeadInfo';
 import * as style from './style.PostHead';
 import { PostHeadProps } from 'model/post';
 
-const PostHead: FunctionComponent<PostHeadProps> = function ({
+export default function PostHead({
   title,
   date,
   categories,
   thumbnail,
-}) {
+}: PostHeadProps) {
   return (
     <style.PostHeadWrapper>
       <div style={{ position: 'absolute', width: '100%', height: '100%' }}>
@@ -18,6 +18,4 @@ const PostHead: FunctionComponent<PostHeadProps> = function ({
       <PostHeadInfo title={title} date={date} categories={categories} />
     </style.PostHeadWrapper>
   );
-};
-
-export default PostHead;
+}

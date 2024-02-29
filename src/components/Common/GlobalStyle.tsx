@@ -1,19 +1,18 @@
 import React from 'react';
 import { Global, css } from '@emotion/react';
 
-
 export default function GlobalStyle(): JSX.Element {
   return <Global styles={defaultStyle} />;
 }
 
 const defaultStyle = css`
-  @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
 
   * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'IBM Plex Sans KR', sans-serif;
   }
 
   html,

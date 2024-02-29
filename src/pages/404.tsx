@@ -1,8 +1,8 @@
-import React, { FunctionComponent } from 'react';
+import React from 'react';
 import GlobalStyle from 'components/Common/GlobalStyle';
 import * as style from 'components/style.404';
 
-const NotFoundPage: FunctionComponent = function () {
+export default function NotFoundPage() {
   return (
     <style.NotFoundPageWrapper>
       <GlobalStyle />
@@ -14,6 +14,4 @@ const NotFoundPage: FunctionComponent = function () {
       <style.GoToMainButton to="/">메인으로</style.GoToMainButton>
     </style.NotFoundPageWrapper>
   );
-};
-
-export default NotFoundPage;
+}

@@ -1,9 +1,9 @@
-import React, { FunctionComponent, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as style from './style.PostContent';
 import { PostContentProps } from 'model/post';
 import Spinner from 'components/Common/Spinner';
 
-const PostContent: FunctionComponent<PostContentProps> = ({ html }) => {
+export default function PostContent({ html }: PostContentProps) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -42,6 +42,4 @@ const PostContent: FunctionComponent<PostContentProps> = ({ html }) => {
       )}
     </>
   );
-};
-
-export default PostContent;
+}

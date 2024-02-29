@@ -15,10 +15,9 @@ export default function PostItem({
   return (
     <style.PostItemWrapper to={link}>
       <style.ThumbnailImage fluid={fluid} alt="Post Item Image" />
-
       <style.PostItemContent>
         <style.Title>{title}</style.Title>
-        <Date>{date}</Date>
+        <style.Date>{date}</style.Date>
         <style.Category>
           {categories.map(item => (
             <style.CategoryItem key={item}>{item}</style.CategoryItem>
@@ -29,5 +28,3 @@ export default function PostItem({
     </style.PostItemWrapper>
   );
 }
-
-PostItem;

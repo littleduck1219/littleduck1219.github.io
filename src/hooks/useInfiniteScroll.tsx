@@ -1,5 +1,5 @@
+import { PostType } from 'model/main';
 import { MutableRefObject, useState, useEffect, useRef, useMemo } from 'react';
-import { PostType } from 'components/Main/PostList';
 
 export type useInfiniteScrollType = {
   containerRef: MutableRefObject<HTMLDivElement | null>;
