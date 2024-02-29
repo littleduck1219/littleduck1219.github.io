@@ -27,6 +27,11 @@ export const MarkdownRenderer = styled.div`
     margin-bottom: 30px;
   }
 
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
   * + h1,
   * + h2,
   * + h3 {
@@ -115,7 +120,8 @@ export const MarkdownRenderer = styled.div`
     }
 
     img {
-      width: 100%;
+      max-width: 100%;
+      height: auto;
     }
 
     hr {

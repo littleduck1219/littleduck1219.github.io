@@ -10,6 +10,7 @@ thumbnail: './Bottleneck_code_optimization_4.png'
 병목 현상을 확인하고 코드를 최적화 시도를 해보도록 하겠습니다.
 
 ![1](https://1drv.ms/i/c/bae70a53437eb109/IQOBgydHMjMtTr1Z80Edb6X_AWSYBccFaOsQH_5fvMIapww?width=752&height=667)
+
 현제 Lighthouse 스코어는 81 점입니다.
 
 ![2](https://1drv.ms/i/c/bae70a53437eb109/IQPcHuZnd5yXSp7wq5ifAzH_AaOg7FrhY3_XcPxlRQuZQHg?width=1271&height=1185)
