@@ -16,6 +16,7 @@ export const PostHeadInfoWrapper = styled.div`
 `;
 
 export const PrevPageIcon = styled.div`
+  z-index: 1;
   display: grid;
   place-items: center;
   width: 40px;
