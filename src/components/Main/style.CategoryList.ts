@@ -5,7 +5,6 @@ import { GatsbyLinkProps } from 'model/main';
 export const CategorySection = styled.div``;
 
 export const CategoryContainer = styled.div`
-  height: 100dvh;
   width: 300px;
   margin: 50px 0 0 40px;
 `;

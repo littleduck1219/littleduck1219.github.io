@@ -1,3 +1,4 @@
+import { FluidObject } from 'gatsby-image';
 import { ReactNode } from 'react';
 
 export interface TemplateProps {

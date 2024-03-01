@@ -33,7 +33,7 @@ export default function Template({
         <meta name="twitter:creator" content="@사용자이름" />
         <meta
           name="google-site-verification"
-          content="웹 마스터 도구가 제공하는 Meta 태그"
+          content="jT9COQZUaxGG40tCz4x2X05Bq3kl6_zswzDD6wlk_Qg"
         />
         <meta
           name="naver-site-verification"
