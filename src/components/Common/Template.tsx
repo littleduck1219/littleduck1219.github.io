@@ -31,14 +31,17 @@ export default function Template({
         <meta name="twitter:image" content={image} />
         <meta name="twitter:site" content="@사용자이름" />
         <meta name="twitter:creator" content="@사용자이름" />
-        <meta
-          name="google-site-verification"
-          content="jT9COQZUaxGG40tCz4x2X05Bq3kl6_zswzDD6wlk_Qg"
-        />
-        <meta
-          name="naver-site-verification"
-          content="69d8239bb84c590fd7b3feb684992b53229dd732"
-        />
+        <Helmet>
+          <meta
+            name="google-site-verification"
+            content={process.env.GATSBY_GOOGLE_SITE_VERIFICATION_KEY}
+          />
+          <meta
+            name="naver-site-verification"
+            content={process.env.GATSBY_NAVER_SITE_VERIFICATION_KEY}
+          />
+        </Helmet>
+
         <html lang="ko" />
       </Helmet>
       <GlobalStyle />

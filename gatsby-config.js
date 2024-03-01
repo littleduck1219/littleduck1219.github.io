@@ -1,9 +1,13 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Duck's blog`,
     description: `성장하을 기록하는 블로그 입니다.`,
     author: `Duck`,
-    siteUrl: 'https://littleduck1219.github.io/',
+    siteUrl: process.env.GATSBY_SITE_URL || 'http://localhost:8000',
   },
   plugins: [
     {
@@ -14,6 +18,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
+
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
