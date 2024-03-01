@@ -7,6 +7,7 @@ import { graphql } from 'gatsby';
 import queryString, { ParsedQuery } from 'query-string';
 import { IndexPageProps } from 'model/index';
 import { CategoryListProps, PostType } from 'model/main';
+import * as style from 'components/style.index';
 import Notice from 'components/Common/Notice';
 
 export default function IndexPage({
@@ -62,11 +63,13 @@ export default function IndexPage({
     >
       <Introduction profileImage={fluid} />
       {/* <Notice /> */}
-      <CategoryList
-        selectedCategory={selectedCategory}
-        categoryList={categoryList}
-      />
-      <PostList selectedCategory={selectedCategory} posts={edges} />
+      <style.BodyWrapper>
+        <CategoryList
+          selectedCategory={selectedCategory}
+          categoryList={categoryList}
+        />
+        <PostList selectedCategory={selectedCategory} posts={edges} />
+      </style.BodyWrapper>
     </Template>
   );
 }

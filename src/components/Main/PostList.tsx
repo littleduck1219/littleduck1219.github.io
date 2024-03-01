@@ -13,18 +13,20 @@ export default function ({ selectedCategory, posts }: PostListProps) {
   );
 
   return (
-    <style.PostListWrapper ref={containerRef}>
-      {postList.map(
-        ({
-          node: {
-            id,
-            fields: { slug },
-            frontmatter,
-          },
-        }: PostType) => (
-          <PostItem {...frontmatter} link={slug} key={id} />
-        ),
-      )}
-    </style.PostListWrapper>
+    <style.PostListContainer>
+      <style.PostListWrapper ref={containerRef}>
+        {postList.map(
+          ({
+            node: {
+              id,
+              fields: { slug },
+              frontmatter,
+            },
+          }: PostType) => (
+            <PostItem {...frontmatter} link={slug} key={id} />
+          ),
+        )}
+      </style.PostListWrapper>
+    </style.PostListContainer>
   );
 }

@@ -2,11 +2,18 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import { GatsbyLinkProps } from 'model/main';
 
+export const CategorySection = styled.div``;
+
+export const CategoryContainer = styled.div`
+  height: 100dvh;
+  width: 300px;
+  margin: 50px 0 0 40px;
+`;
+
 export const CategoryListWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  width: 768px;
-  margin: 100px auto 0;
 
   @media (max-width: 768px) {
     width: 100%;
