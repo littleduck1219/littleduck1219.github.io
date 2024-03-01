@@ -1,12 +1,14 @@
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
-import { GatsbyLinkProps } from 'model/main';
 
-export const CategorySection = styled.div``;
-
-export const CategoryContainer = styled.div`
+export const CategoryContainer = styled.div<CategoryItemProps>`
   width: 300px;
-  margin: 50px 0 0 40px;
+  margin-top: 50px;
+  margin-left: ${props => (props.isMobile ? '0' : '40px')};
+  // isResetting과 isMobile props에 따라 스타일 적용
+  transition: ${props => (props.isResetting ? 'all 0.3s ease-in-out' : 'none')};
+  width: ${props => (props.isMobile ? '0' : '300px')};
+  overflow: hidden;
 `;
 
 export const CategoryListWrapper = styled.div`
@@ -22,7 +24,7 @@ export const CategoryListWrapper = styled.div`
 `;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const CategoryItem = styled(Link)<GatsbyLinkProps>`
+export const CategoryItem = styled(Link)<{ active: boolean }>`
   margin-right: 20px;
   padding: 5px 0;
   font-size: 18px;
@@ -37,3 +39,9 @@ export const CategoryItem = styled(Link)<GatsbyLinkProps>`
     font-size: 15px;
   }
 `;
+
+interface CategoryItemProps {
+  ref: React.RefObject<HTMLDivElement>;
+  isResetting: boolean;
+  isMobile: boolean;
+}

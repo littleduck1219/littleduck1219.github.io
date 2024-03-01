@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import Template from 'components/Common/Template';
 import CategoryList from 'components/Main/CategoryList';
 import Introduction from 'components/Main/Introduction';
@@ -8,7 +8,9 @@ import queryString, { ParsedQuery } from 'query-string';
 import { IndexPageProps } from 'model/index';
 import { CategoryListProps, PostType } from 'model/main';
 import * as style from 'components/style.index';
-import Notice from 'components/Common/Notice';
+import { useMediaQuery } from 'usehooks-ts';
+import useMobileStore from '../store/useMobile';
+import MobileHeader from 'components/Common/MobileHeader';
 
 export default function IndexPage({
   location: { search },
@@ -23,6 +25,9 @@ export default function IndexPage({
     },
   },
 }: IndexPageProps) {
+  const isMobileQuery = useMediaQuery('(max-width: 1080px)');
+  const setIsMobile = useMobileStore(state => state.setIsMobile);
+
   const parsed: ParsedQuery<string> = queryString.parse(search);
   const selectedCategory: string =
     typeof parsed.category !== 'string' || !parsed.category
@@ -54,6 +59,10 @@ export default function IndexPage({
     [],
   );
 
+  useEffect(() => {
+    setIsMobile(isMobileQuery);
+  }, [isMobileQuery, setIsMobile]);
+
   return (
     <Template
       title={title}
@@ -61,8 +70,8 @@ export default function IndexPage({
       url={siteUrl}
       image={publicURL}
     >
+      <MobileHeader />
       <Introduction profileImage={fluid} />
-      {/* <Notice /> */}
       <style.BodyWrapper>
         <CategoryList
           selectedCategory={selectedCategory}

@@ -6,7 +6,7 @@ export const Background = styled.div`
   color: #ffffff;
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ isMobile: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     height: 300px;
-    padding: 0 20px;
+    padding: 100px 20px 0;
   }
 `;
 

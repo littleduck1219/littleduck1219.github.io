@@ -18,7 +18,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
-
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -34,6 +33,7 @@ module.exports = {
         path: `${__dirname}/static`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

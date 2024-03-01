@@ -15,6 +15,7 @@ export default function PostItem({
   return (
     <style.PostItemWrapper to={link}>
       <style.ThumbnailImage fluid={fluid} alt="Post Item Image" />
+
       <style.PostItemContent>
         <style.Title>{title}</style.Title>
         <style.Date>{date}</style.Date>

@@ -1,13 +1,14 @@
 import React from 'react';
-import ProfileImage, { ProfileImageProps } from 'components/Main/ProfileImage';
+import ProfileImage from 'components/Main/ProfileImage';
 import * as style from './style.Introduce';
+import { ProfileImageProps } from 'model/main';
+import useMobileStore from '../../store/useMobile';
 
-type IntroductionProps = ProfileImageProps;
-
-export default function Introduction({ profileImage }: IntroductionProps) {
+export default function Introduction({ profileImage }: ProfileImageProps) {
+  const isMobile = useMobileStore(set => set.isMobile);
   return (
     <style.Background>
-      <style.Wrapper>
+      <style.Wrapper isMobile={isMobile}>
         <ProfileImage profileImage={profileImage} />
         <div>
           <style.SubTitle>나의 성장 일기</style.SubTitle>

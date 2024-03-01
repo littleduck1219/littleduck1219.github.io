@@ -2,7 +2,7 @@ import { FluidObject } from 'gatsby-image';
 
 // PostHead
 export interface GatsbyImgProps {
-  fluid: FluidObject;
+  gatsbyImageData: IGatsbyImageData;
   alt: string;
   className?: string;
 }

@@ -4,7 +4,7 @@ export const MarkdownRenderer = styled.div`
   // Renderer Style
   display: flex;
   flex-direction: column;
-  width: 800px;
+  width: 768px;
   margin: 0 auto;
   padding: 100px 0;
   word-break: break-all;
