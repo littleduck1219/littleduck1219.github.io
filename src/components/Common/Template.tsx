@@ -37,7 +37,7 @@ export default function Template({
         />
         <meta
           name="naver-site-verification"
-          content="웹 마스터 도구가 제공하는 Meta 태그"
+          content="69d8239bb84c590fd7b3feb684992b53229dd732"
         />
         <html lang="ko" />
       </Helmet>
