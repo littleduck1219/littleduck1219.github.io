@@ -24,7 +24,8 @@
   "include": [
     "src/**/*.tsx",
     "src/components/Post/style.PostContent.ts",
-    "src/components/Main/style.PostItem.ts"
+    "src/components/Main/style.PostItem.ts",
+    "src/store/useMobile.ts"
   ],
   "exclude": ["node_modules"]
 }
