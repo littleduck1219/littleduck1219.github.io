@@ -90,7 +90,7 @@ module.exports = {
       },
     },
     {
-      resolve: `@gatsby-plugin-google-gtag`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
         // Google Analytics 4의 측정 ID를 여기에 추가합니다.
         trackingIds: [`${process.env.REACT_APP_GOOGLE_ANALYTICS}`],
