@@ -4,6 +4,7 @@ import Footer from 'components/Common/Footer';
 import { Helmet } from 'react-helmet';
 import * as style from './style.Template';
 import { TemplateProps } from 'model/common';
+import ReactGA from 'react-ga';
 
 export default function Template({
   title,
@@ -12,6 +13,9 @@ export default function Template({
   image,
   children,
 }: TemplateProps): JSX.Element {
+  const TRAKING_ID = process.env.GATSBY_GA_TRACKING_ID;
+  ReactGA.initialize(TRAKING_ID, { debug: true });
+  ReactGA.pageview(window.location.pathname);
   return (
     <style.Container>
       <Helmet>
