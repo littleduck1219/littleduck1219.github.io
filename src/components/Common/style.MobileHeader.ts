@@ -6,7 +6,7 @@ const slideDown = keyframes`
     transform: translateY(-100%);
   }
   to {
-    transform: translateY(0);
+    transform: translateY(0%);
   }
 `;
 

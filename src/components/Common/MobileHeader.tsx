@@ -16,7 +16,7 @@ export default function MobileHeader() {
     }
   };
 
-  if (!isMobile) return null;
+  // if (!isMobile) return null;
   return (
     <>
       <style.MobileHeaderContainer isMobile={isMobile}>
