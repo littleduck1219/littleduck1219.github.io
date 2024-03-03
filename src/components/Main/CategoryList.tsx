@@ -1,8 +1,9 @@
-import React, { ElementRef, useRef, useState } from 'react';
+import React from 'react';
 import { CategoryListProps } from 'model/main';
 import * as style from './style.CategoryList';
 import { useMobileStore } from '../../store/useMobile';
 import { useCategoryStore } from '../../store/useCategory';
+import useWindowWidth from 'hooks/useWindowWidth';
 
 export default function CategoryList({
   selectedCategory,
@@ -10,19 +11,16 @@ export default function CategoryList({
 }: CategoryListProps) {
   const isMobile = useMobileStore(set => set.isMobile);
   const isCategory = useCategoryStore(set => set.isOpen);
-  const isResizingRef = useRef(false);
-  const sidebarRef = useRef<ElementRef<'div'>>(null);
-  const navbarRef = useRef<ElementRef<'div'>>(null);
-  const [isResetting, setIsResetting] = useState(false);
-  const [isCollapsed, setIsCollapsed] = useState(isMobile);
+  const { windowWidth } = useWindowWidth();
+
+  console.log(windowWidth);
 
   return (
     <>
       <style.CategoryContainer
-        ref={sidebarRef}
-        isResetting={isResetting}
         isMobile={isMobile}
         isOpen={isCategory}
+        windowWidth={windowWidth}
       >
         <style.CategoryListWrapper>
           {Object.entries(categoryList).map(([name, count]) => (

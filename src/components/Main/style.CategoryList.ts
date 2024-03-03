@@ -1,12 +1,38 @@
+import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
+const categoryAppear = keyframes`
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+`;
+
+const categoryDisappear = keyframes`
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+`;
+
+const animationStyles = (isMobile: boolean) => css`
+  animation: ${isMobile ? categoryDisappear : categoryAppear} 0.5s ease-out
+    forwards;
+`;
+
 export const CategoryContainer = styled.div<CategoryItemProps>`
+  display: ${props => (props.windowWidth < 1084 ? 'none' : 'block')};
   margin-top: 50px;
   margin-left: ${props => (props.isMobile ? '0' : '40px')};
-  transition: ${props => (props.isResetting ? 'all 0.3s ease-in-out' : 'none')};
-  width: ${props => (props.isMobile ? '0' : '300px')};
+  width: ${props =>
+    props.windowWidth < 1080 ? '0' : props.windowWidth > 1084 ? '300px' : null};
   overflow: hidden;
+  ${props => animationStyles(props.isMobile)}
 `;
 
 export const CategoryListWrapper = styled.div`
@@ -39,8 +65,7 @@ export const CategoryItem = styled(Link)<{ active: boolean }>`
 `;
 
 interface CategoryItemProps {
-  ref: React.RefObject<HTMLDivElement>;
-  isResetting: boolean;
   isMobile: boolean;
   isOpen: boolean;
+  windowWidth: number;
 }
