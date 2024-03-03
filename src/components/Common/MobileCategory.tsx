@@ -13,7 +13,6 @@ export default function MobileCategory({
   const { isOpen, onOpen, onClose } = useCategoryStore();
 
   const navOpenHandler = (e: React.MouseEvent) => {
-    e.preventDefault();
     onClose();
   };
 
