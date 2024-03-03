@@ -2,10 +2,8 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
 export const CategoryContainer = styled.div<CategoryItemProps>`
-  width: 300px;
   margin-top: 50px;
   margin-left: ${props => (props.isMobile ? '0' : '40px')};
-  // isResetting과 isMobile props에 따라 스타일 적용
   transition: ${props => (props.isResetting ? 'all 0.3s ease-in-out' : 'none')};
   width: ${props => (props.isMobile ? '0' : '300px')};
   overflow: hidden;
@@ -44,4 +42,5 @@ interface CategoryItemProps {
   ref: React.RefObject<HTMLDivElement>;
   isResetting: boolean;
   isMobile: boolean;
+  isOpen: boolean;
 }

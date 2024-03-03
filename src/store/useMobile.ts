@@ -5,9 +5,7 @@ type MobileStore = {
   setIsMobile: (isMobile: boolean) => void;
 };
 
-const UseMobileStore = create<MobileStore>(set => ({
+export const useMobileStore = create<MobileStore>(set => ({
   isMobile: false,
   setIsMobile: (isMobile: boolean) => set({ isMobile }),
 }));
-
-export default UseMobileStore;

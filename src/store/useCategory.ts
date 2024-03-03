@@ -6,7 +6,7 @@ type CategoryStore = {
   onClose: () => void;
 };
 
-const useCategoryStore = create<CategoryStore>(set => ({
+export const useCategoryStore = create<CategoryStore>(set => ({
   isOpen: false,
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false }),

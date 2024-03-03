@@ -9,8 +9,9 @@ import { IndexPageProps } from 'model/index';
 import { CategoryListProps, PostType } from 'model/main';
 import * as style from 'components/style.index';
 import { useMediaQuery } from 'usehooks-ts';
-import useMobileStore from '../store/useMobile';
+import { useMobileStore } from '../store/useMobile';
 import MobileHeader from 'components/Common/MobileHeader';
+import MobileCategory from 'components/Common/MobileCategory';
 
 export default function IndexPage({
   location: { search },
@@ -71,6 +72,10 @@ export default function IndexPage({
       image={publicURL}
     >
       <MobileHeader />
+      <MobileCategory
+        selectedCategory={selectedCategory}
+        categoryList={categoryList}
+      />
       <Introduction profileImage={fluid} />
       <style.BodyWrapper>
         <CategoryList

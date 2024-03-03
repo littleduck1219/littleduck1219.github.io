@@ -2,7 +2,7 @@ import React from 'react';
 import ProfileImage from 'components/Main/ProfileImage';
 import * as style from './style.Introduce';
 import { ProfileImageProps } from 'model/main';
-import useMobileStore from '../../store/useMobile';
+import { useMobileStore } from '../../store/useMobile';
 
 export default function Introduction({ profileImage }: ProfileImageProps) {
   const isMobile = useMobileStore(set => set.isMobile);
