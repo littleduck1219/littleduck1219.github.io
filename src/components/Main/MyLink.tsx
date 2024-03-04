@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as style from './style.MyLink';
-import { Github, Linkedin, Mail } from 'lucide-react';
 import { useMobileStore } from '../../store/useMobile';
+import LinkButton from 'components/Common/LinkButton';
 
 export default function MyLink() {
   const isMobile = useMobileStore(state => state.isMobile);
@@ -18,9 +18,12 @@ export default function MyLink() {
 
   return (
     <style.MyLinkWrapper offsetY={offsetY}>
-      <Mail size={20} />
-      <Github size={20} />
-      <Linkedin size={20} />
+      <LinkButton
+        to="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=littleduck1219@gmail.com"
+        iconName="Mail"
+      />
+      <LinkButton to="https://github.com/littleduck1219" iconName="Github" />
+      <LinkButton to="www.linkedin.com/in/dev-duck" iconName="Linkedin" />
     </style.MyLinkWrapper>
   );
 }

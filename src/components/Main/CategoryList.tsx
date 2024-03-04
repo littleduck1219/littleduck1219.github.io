@@ -11,6 +11,8 @@ export default function CategoryList({
   const isMobile = useMobileStore(set => set.isMobile);
   const isCategory = useCategoryStore(set => set.isOpen);
 
+  if (isMobile) return null;
+
   return (
     <>
       <style.CategoryContainer isMobile={isMobile} isOpen={isCategory}>
