@@ -28,6 +28,7 @@ export default function IndexPage({
   },
 }: IndexPageProps) {
   const isMobileQuery = useMediaQuery('(max-width: 1080px)');
+  const isMobile = useMobileStore(state => state.isMobile);
   const setIsMobile = useMobileStore(state => state.setIsMobile);
 
   const parsed: ParsedQuery<string> = queryString.parse(search);
@@ -72,18 +73,22 @@ export default function IndexPage({
       url={siteUrl}
       image={publicURL}
     >
-      <MobileHeader />
+      {isMobile && <MobileHeader />}
       <MobileCategory
         selectedCategory={selectedCategory}
         categoryList={categoryList}
       />
       <Introduction profileImage={fluid} />
       <style.BodyWrapper>
-        <MyLink />
-        <CategoryList
-          selectedCategory={selectedCategory}
-          categoryList={categoryList}
-        />
+        {!isMobile && <MyLink />}
+
+        {isMobile && (
+          <CategoryList
+            selectedCategory={selectedCategory}
+            categoryList={categoryList}
+          />
+        )}
+
         <PostList selectedCategory={selectedCategory} posts={edges} />
       </style.BodyWrapper>
     </Template>
