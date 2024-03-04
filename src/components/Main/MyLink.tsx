@@ -17,7 +17,7 @@ export default function MyLink() {
   if (isMobile) return null;
 
   return (
-    <style.MyLinkWrapper offsetY={offsetY}>
+    <style.MyLinkWrapper offsetY={offsetY} isMobile={isMobile}>
       <LinkButton
         to="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=littleduck1219@gmail.com"
         iconName="Mail"

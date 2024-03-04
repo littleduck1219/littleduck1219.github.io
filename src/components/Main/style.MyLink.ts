@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 
-export const MyLinkWrapper = styled.div<{ offsetY: number }>`
+export const MyLinkWrapper = styled.div<{ offsetY: number; isMobile: boolean }>`
   position: fixed;
   right: 20px;
   top: 37%;
-  display: flex;
+  display: ${props => (props.isMobile ? 'none' : 'flex')};
   flex-direction: column;
   gap: 10px;
   padding: 10px;
