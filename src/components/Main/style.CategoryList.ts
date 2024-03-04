@@ -27,13 +27,17 @@ const animationStyles = (isMobile: boolean) => css`
 
 export const CategoryContainer = styled.div<CategoryItemProps>`
   position: absolute;
-  /* display: ${props => (props.isMobile ? 'none' : 'block')}; */
+  display: none;
   margin-top: 50px;
   margin-left: ${props => (props.isMobile ? '0' : '40px')};
   /* width: ${props => (props.isMobile ? '0' : '300px')}; */
   width: 300px;
   overflow: hidden;
   ${props => animationStyles(props.isMobile)}
+
+  @media (max-width: 1080px) {
+    display: flex;
+  }
 `;
 
 export const CategoryListWrapper = styled.div`
