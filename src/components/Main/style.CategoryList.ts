@@ -26,11 +26,12 @@ const animationStyles = (isMobile: boolean) => css`
 `;
 
 export const CategoryContainer = styled.div<CategoryItemProps>`
-  display: ${props => (props.windowWidth < 1084 ? 'none' : 'block')};
+  position: absolute;
+  /* display: ${props => (props.isMobile ? 'none' : 'block')}; */
   margin-top: 50px;
   margin-left: ${props => (props.isMobile ? '0' : '40px')};
-  width: ${props =>
-    props.windowWidth < 1080 ? '0' : props.windowWidth > 1084 ? '300px' : null};
+  /* width: ${props => (props.isMobile ? '0' : '300px')}; */
+  width: 300px;
   overflow: hidden;
   ${props => animationStyles(props.isMobile)}
 `;
