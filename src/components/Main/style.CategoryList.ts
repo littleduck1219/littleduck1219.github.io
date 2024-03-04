@@ -35,7 +35,7 @@ export const CategoryContainer = styled.div<CategoryItemProps>`
   overflow: hidden;
   ${props => animationStyles(props.isMobile)}
 
-  @media (max-width: 1080px) {
+  @media (min-width: 1081px) {
     display: flex;
   }
 `;
