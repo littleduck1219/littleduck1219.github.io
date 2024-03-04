@@ -1,6 +1,6 @@
 import React from 'react';
 import * as style from './style.MobileHeader';
-import { MenuIcon, X } from 'lucide-react';
+import { MenuIcon } from 'lucide-react';
 import { useMobileStore } from '../../store/useMobile';
 import { useCategoryStore } from '../../store/useCategory';
 
@@ -16,12 +16,13 @@ export default function MobileHeader() {
     }
   };
 
-  // if (!isMobile) return null;
+  if (!isMobile) return null;
+
   return (
     <>
       <style.MobileHeaderContainer isMobile={isMobile}>
         <style.MobileMenuIcon onClick={navOpenHandler}>
-          {!menuCondition.isOpen ? <MenuIcon color="black" /> : <X />}
+          <MenuIcon color="black" />
         </style.MobileMenuIcon>
       </style.MobileHeaderContainer>
     </>

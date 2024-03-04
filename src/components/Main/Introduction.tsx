@@ -10,10 +10,9 @@ export default function Introduction({ profileImage }: ProfileImageProps) {
     <style.Background>
       <style.Wrapper isMobile={isMobile}>
         <ProfileImage profileImage={profileImage} />
-        <div>
-          <style.SubTitle>나의 성장 일기</style.SubTitle>
-          <style.Title>프론트엔드 개발자 박경덕 입니다.</style.Title>
-        </div>
+
+        <style.SubTitle>나의 성장 일기</style.SubTitle>
+        <style.Title>프론트엔드 개발자 박경덕 입니다.</style.Title>
       </style.Wrapper>
     </style.Background>
   );

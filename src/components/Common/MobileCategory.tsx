@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { useMobileStore } from '../../store/useMobile';
 import { useCategoryStore } from '../../store/useCategory';
-import { X } from 'lucide-react';
+import { X, Github, Linkedin, Mail } from 'lucide-react';
 import * as style from './style.MobileCategory';
 import { CategoryListProps } from 'model/main';
+import LinkButton from './LinkButton';
 
 export default function MobileCategory({
   selectedCategory,
@@ -34,9 +35,18 @@ export default function MobileCategory({
   return (
     <style.MobileCategoryContainer isMobile={isMobile} isCategory={isOpen}>
       <style.CategoryCloserWrapper>
-        <style.CategoryCloser onClick={navOpenHandler}>
-          <X />
-        </style.CategoryCloser>
+        <style.MyLinkWrapper>
+          <LinkButton
+            to="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=littleduck1219@gmail.com"
+            iconName="Mail"
+          />
+          <LinkButton
+            to="https://github.com/littleduck1219"
+            iconName="Github"
+          />
+          <LinkButton to="www.linkedin.com/in/dev-duck" iconName="Linkedin" />
+        </style.MyLinkWrapper>
+        <LinkButton to="" iconName="X" onClick={navOpenHandler} />
       </style.CategoryCloserWrapper>
       <style.MobileCategoryWrapper>
         <style.MobileCategory>

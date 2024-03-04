@@ -4,8 +4,15 @@ import * as style from './style.Footer';
 export default function Footer(): JSX.Element {
   return (
     <style.FooterWrapper>
-      Thank You for Visiting My Blog, Have a Good Day 😆
-      <br />© 2024 Developer Duck, Powered By Gatsby.
+      <p>© 2024 Develop By Duck.</p>
+      <style.MakeByWrapper>
+        <span>Make By </span>
+        <style.FooterImageWrapper>
+          <style.FooterImage src="/react.png" alt="react" />
+          <style.FooterImage src="/gatsby.png" alt="gatsby" />
+          <style.FooterImage src="/github.jpeg" alt="github" />
+        </style.FooterImageWrapper>
+      </style.MakeByWrapper>
     </style.FooterWrapper>
   );
 }

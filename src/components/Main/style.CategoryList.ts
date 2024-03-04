@@ -68,5 +68,4 @@ export const CategoryItem = styled(Link)<{ active: boolean }>`
 interface CategoryItemProps {
   isMobile: boolean;
   isOpen: boolean;
-  windowWidth: number;
 }

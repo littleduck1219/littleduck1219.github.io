@@ -3,7 +3,6 @@ import { CategoryListProps } from 'model/main';
 import * as style from './style.CategoryList';
 import { useMobileStore } from '../../store/useMobile';
 import { useCategoryStore } from '../../store/useCategory';
-import useWindowWidth from 'hooks/useWindowWidth';
 
 export default function CategoryList({
   selectedCategory,
@@ -11,17 +10,10 @@ export default function CategoryList({
 }: CategoryListProps) {
   const isMobile = useMobileStore(set => set.isMobile);
   const isCategory = useCategoryStore(set => set.isOpen);
-  const { windowWidth } = useWindowWidth();
-
-  console.log(windowWidth);
 
   return (
     <>
-      <style.CategoryContainer
-        isMobile={isMobile}
-        isOpen={isCategory}
-        windowWidth={windowWidth}
-      >
+      <style.CategoryContainer isMobile={isMobile} isOpen={isCategory}>
         <style.CategoryListWrapper>
           {Object.entries(categoryList).map(([name, count]) => (
             <style.CategoryItem

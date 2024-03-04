@@ -50,11 +50,12 @@ export const CategoryItem = styled(Link)<{ active: boolean }>`
 export const CategoryCloserWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 60px;
+  margin: 0 30px 0 30px;
 `;
 
-export const CategoryCloser = styled.div`
-  cursor: pointer;
-  margin-right: 20px;
+export const MyLinkWrapper = styled.div`
+  display: flex;
+  gap: 20px;
 `;

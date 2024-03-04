@@ -13,3 +13,18 @@ export const FooterWrapper = styled.footer`
     font-size: 13px;
   }
 `;
+
+export const MakeByWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const FooterImageWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const FooterImage = styled.img`
+  width: 80px;
+`;

@@ -12,6 +12,7 @@ import { useMediaQuery } from 'usehooks-ts';
 import { useMobileStore } from '../store/useMobile';
 import MobileHeader from 'components/Common/MobileHeader';
 import MobileCategory from 'components/Common/MobileCategory';
+import MyLink from 'components/Main/MyLink';
 
 export default function IndexPage({
   location: { search },
@@ -78,6 +79,7 @@ export default function IndexPage({
       />
       <Introduction profileImage={fluid} />
       <style.BodyWrapper>
+        <MyLink />
         <CategoryList
           selectedCategory={selectedCategory}
           categoryList={categoryList}
