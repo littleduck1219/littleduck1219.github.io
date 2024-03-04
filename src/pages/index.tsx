@@ -82,7 +82,7 @@ export default function IndexPage({
       <style.BodyWrapper>
         {!isMobile && <MyLink />}
 
-        {isMobile && (
+        {!isMobile && (
           <CategoryList
             selectedCategory={selectedCategory}
             categoryList={categoryList}
