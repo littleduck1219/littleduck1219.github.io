@@ -74,20 +74,20 @@ export default function IndexPage({
       image={publicURL}
     >
       {isMobile && <MobileHeader />}
-      <MobileCategory
-        selectedCategory={selectedCategory}
-        categoryList={categoryList}
-      />
+      {isMobile && (
+        <MobileCategory
+          selectedCategory={selectedCategory}
+          categoryList={categoryList}
+        />
+      )}
       <Introduction profileImage={fluid} />
       <style.BodyWrapper>
         {!isMobile && <MyLink />}
 
-        {!isMobile && (
-          <CategoryList
-            selectedCategory={selectedCategory}
-            categoryList={categoryList}
-          />
-        )}
+        <CategoryList
+          selectedCategory={selectedCategory}
+          categoryList={categoryList}
+        />
 
         <PostList selectedCategory={selectedCategory} posts={edges} />
       </style.BodyWrapper>

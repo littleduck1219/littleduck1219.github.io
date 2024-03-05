@@ -1,52 +1,50 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useMobileStore } from '../../store/useMobile';
 import * as style from './style.MobileHeader';
 import { MenuIcon } from 'lucide-react';
-import { useMobileStore } from '../../store/useMobile';
 import { useCategoryStore } from '../../store/useCategory';
 
 export default function MobileHeader() {
-  const isMobile = useMobileStore(set => set.isMobile);
-  const menuCondition = useCategoryStore();
+  const { isMobile, headerVisible, setHeaderVisible } = useMobileStore();
   const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [headerClass, setHeaderClass] = useState('nav-down');
+  const { isOpen, onClose, onOpen } = useCategoryStore();
 
   const navOpenHandler = () => {
-    if (menuCondition.isOpen) {
-      menuCondition.onClose();
-    } else {
-      menuCondition.onOpen();
-    }
+    isOpen ? onClose() : onOpen();
   };
 
   useEffect(() => {
     const handleScroll = () => {
+      // isOpen 상태가 true일 때는 스크롤 이벤트에 의한 상태 변경을 방지합니다.
+      if (isOpen) return;
+
       const currentScrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
 
-      if (currentScrollTop > lastScrollTop) {
-        setHeaderClass('nav-up');
-      } else {
-        setHeaderClass('nav-down');
+      if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
+        setHeaderVisible(false);
+      } else if (currentScrollTop < lastScrollTop) {
+        setHeaderVisible(true);
       }
-      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
+      setLastScrollTop(currentScrollTop);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    if (isMobile) {
+      window.addEventListener('scroll', handleScroll);
+    }
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [lastScrollTop]);
-
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isMobile, lastScrollTop, isOpen]);
   if (!isMobile) return null;
 
   return (
-    <>
-      <style.MobileHeaderContainer className={headerClass} isMobile={isMobile}>
-        <style.MobileMenuIcon onClick={navOpenHandler}>
-          <MenuIcon color="black" />
-        </style.MobileMenuIcon>
-      </style.MobileHeaderContainer>
-    </>
+    <style.MobileHeaderContainer
+      isVisible={headerVisible}
+      onClick={navOpenHandler}
+    >
+      <style.MobileMenuIcon>
+        <MenuIcon color="black" />
+      </style.MobileMenuIcon>
+    </style.MobileHeaderContainer>
   );
 }
