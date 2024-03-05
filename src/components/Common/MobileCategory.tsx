@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useMobileStore } from '../../store/useMobile';
 import { useCategoryStore } from '../../store/useCategory';
-import { X, Github, Linkedin, Mail } from 'lucide-react';
 import * as style from './style.MobileCategory';
 import { CategoryListProps } from 'model/main';
 import LinkButton from './LinkButton';
@@ -11,7 +10,7 @@ export default function MobileCategory({
   categoryList,
 }: CategoryListProps) {
   const isMobile = useMobileStore(set => set.isMobile);
-  const { isOpen, onOpen, onClose } = useCategoryStore();
+  const { isOpen, onClose } = useCategoryStore();
 
   const navOpenHandler = () => {
     onClose();
@@ -37,16 +36,16 @@ export default function MobileCategory({
       <style.CategoryCloserWrapper>
         <style.MyLinkWrapper>
           <LinkButton
-            to="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=littleduck1219@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=littleduck1219@gmail.com"
             iconName="Mail"
           />
           <LinkButton
-            to="https://github.com/littleduck1219"
+            href="https://github.com/littleduck1219"
             iconName="Github"
           />
-          <LinkButton to="www.linkedin.com/in/dev-duck" iconName="Linkedin" />
+          <LinkButton href="www.linkedin.com/in/dev-duck" iconName="Linkedin" />
         </style.MyLinkWrapper>
-        <LinkButton to="" iconName="X" onClick={navOpenHandler} />
+        <LinkButton href="" iconName="X" onClick={navOpenHandler} />
       </style.CategoryCloserWrapper>
       <style.MobileCategoryWrapper>
         <style.MobileCategory>

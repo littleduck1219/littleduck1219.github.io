@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Duck's blog`,
+    title: `DuckBlog`,
     description: `성장하을 기록하는 블로그 입니다.`,
     author: `Duck`,
     siteUrl: process.env.GATSBY_SITE_URL || 'http://localhost:8000',

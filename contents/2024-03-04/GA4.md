@@ -1,6 +1,6 @@
 ---
 date: '2024-03-04'
-title: 'GitBlog에 GA4연결하여 실시간 사용자 추적하기'
+title: 'GitBlog에 GA4연결하여 데이터 수집'
 categories: ['Web', 'React', 'GitBlog', 'Gatsby']
 summary: 'GitBlog에 사용자가 어떠한 동작을 하는지 추적하기 위해 GA4를 연결하였습니다.'
 thumbnail: 'GA4_3.png'

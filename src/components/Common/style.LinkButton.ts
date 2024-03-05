@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import { Link } from 'gatsby';
 
-export const StyledLinkButton = styled(Link)`
+export const StyledLinkButton = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
