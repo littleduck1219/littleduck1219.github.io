@@ -24,15 +24,22 @@ const animationStyles = (isMobile: boolean) => css`
 `;
 
 export const MobileHeaderContainer = styled.div<{ isMobile: boolean }>`
-  position: absolute;
+  ${({ isMobile }) => animationStyles(isMobile)}
+  &.nav-down {
+    top: 0;
+  }
+  &.nav-up {
+    top: -60px;
+  }
+  transition: top 0.2s ease-in-out;
+  position: fixed;
   width: 100%;
-  top: 0;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   height: 60px;
   background-color: white;
-  ${({ isMobile }) => animationStyles(isMobile)}
+  z-index: 99999;
 `;
 
 export const MobileMenuIcon = styled.div`
