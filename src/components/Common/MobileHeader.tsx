@@ -28,7 +28,7 @@ export default function MobileHeader() {
       } else {
         setHeaderClass('nav-down');
       }
-      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop); // For Mobile or negative scrolling
+      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });

@@ -14,7 +14,7 @@ export const MobileCategoryContainer = styled.div<MobileCategoryWrapperProps>`
   height: 100vh;
   overflow: hidden;
   background-color: white;
-  z-index: 9999;
+  z-index: 99999;
   transform: ${props =>
     props.isMobile && props.isCategory ? 'translateX(0)' : 'translateX(-100%)'};
   transition: transform 0.3s ease;
