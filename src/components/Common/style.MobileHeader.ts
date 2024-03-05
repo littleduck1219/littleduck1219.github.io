@@ -19,12 +19,12 @@ const slideUp = keyframes`
   }
 `;
 
-const animationStyles = (isVisible: boolean) => css`
-  animation: ${isVisible ? slideDown : slideUp} 0.5s ease-out forwards;
+const animationStyles = (isMobile: boolean) => css`
+  animation: ${isMobile ? slideDown : slideUp} 0.5s ease-out forwards;
 `;
 
-export const MobileHeaderContainer = styled.div<{ isVisible: boolean }>`
-  ${({ isVisible }) => animationStyles(isVisible)}
+export const MobileHeaderContainer = styled.div<{ isMobile: boolean }>`
+  ${({ isMobile }) => animationStyles(isMobile)}
   &.nav-down {
     top: 0;
   }

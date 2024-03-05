@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { useMobileStore } from '../../store/useMobile';
+import React, { useState, useEffect } from 'react';
 import * as style from './style.MobileHeader';
 import { MenuIcon } from 'lucide-react';
+import { useMobileStore } from '../../store/useMobile';
 import { useCategoryStore } from '../../store/useCategory';
 
 export default function MobileHeader() {
-  const { isMobile, headerVisible, setHeaderVisible } = useMobileStore();
-  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const isMobile = useMobileStore(state => state.isMobile);
   const { isOpen, onClose, onOpen } = useCategoryStore();
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [headerVisible, setHeaderVisible] = useState(true);
 
   const navOpenHandler = () => {
     isOpen ? onClose() : onOpen();
@@ -15,12 +16,9 @@ export default function MobileHeader() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // isOpen 상태가 true일 때는 스크롤 이벤트에 의한 상태 변경을 방지합니다.
-      if (isOpen) return;
-
       const currentScrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
-
+      // Hide header on scroll down, show on scroll up
       if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
         setHeaderVisible(false);
       } else if (currentScrollTop < lastScrollTop) {
@@ -34,15 +32,16 @@ export default function MobileHeader() {
     }
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isMobile, lastScrollTop, isOpen]);
+  }, [isMobile, lastScrollTop]);
+
   if (!isMobile) return null;
 
   return (
     <style.MobileHeaderContainer
-      isVisible={headerVisible}
-      onClick={navOpenHandler}
+      className={headerVisible ? 'nav-down' : 'nav-up'}
+      isMobile={isMobile}
     >
-      <style.MobileMenuIcon>
+      <style.MobileMenuIcon onClick={navOpenHandler}>
         <MenuIcon color="black" />
       </style.MobileMenuIcon>
     </style.MobileHeaderContainer>
