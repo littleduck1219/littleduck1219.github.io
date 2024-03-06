@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import * as style from './style.MobileHeader';
 import { MenuIcon } from 'lucide-react';
 import { useMobileStore } from '../../store/useMobile';
@@ -10,9 +10,9 @@ export default function MobileHeader() {
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
 
-  const navOpenHandler = () => {
+  const navOpenHandler = useCallback(() => {
     isOpen ? onClose() : onOpen();
-  };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
