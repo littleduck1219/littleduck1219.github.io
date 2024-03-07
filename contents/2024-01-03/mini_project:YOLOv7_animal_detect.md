@@ -29,7 +29,7 @@ YOLOv7을 이용한 동물 감지를 해보도록 하겠습니다.
 
 </br>
 
-![Attached Photo 1](https://1drv.ms/i/c/bae70a53437eb109/IQOqsxZ70sdYT7Oy4DA5a-GbAXk27CnuSHgkbBpDDl7ygcs?width=543&height=278)
+![1](https://i.ibb.co/KqzYH1k/mini-project-YOLOv7-animal-detect-1.png)
 
 </br>
 
@@ -257,15 +257,15 @@ loss_ota: 1 # use ComputeLossOTA, use 0 for faster training
 
 </br>
 
-![Attached Photo 2](https://1drv.ms/i/c/bae70a53437eb109/IQNVMbEqO3HMSo0J9tnGKDgwATQUGWcvjhzUge4J2yI06Rs?width=666&height=278)
+![2](https://i.ibb.co/kKBBN30/mini-project-YOLOv7-animal-detect-2.png)
 
 </br>
 
-![Attached Photo 3](https://1drv.ms/i/c/bae70a53437eb109/IQMtPss9-oZKRoSuhHdqtC9SAY9Tjsca197f6K9GIwtVOEY?width=1139&height=707)
+![3](https://i.ibb.co/ch6dQz2/mini-project-YOLOv7-animal-detect-3.png)
 
 </br>
 
-![Attached Photo 4](https://1drv.ms/i/c/bae70a53437eb109/IQNxVf-k6PuNQpAwE8Mao57IAVjEsd-ruQ30ah-NBvgF3cE?width=1053&height=697)
+![4](https://i.ibb.co/qJPHNnn/mini-project-YOLOv7-animal-detect-4.png)
 
 </br>
 각 라벨별로 동물들을 잘 잡아 내는것을 확인 할 수 있었습니다.

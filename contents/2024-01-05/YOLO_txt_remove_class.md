@@ -39,7 +39,6 @@ label_data_path = r"D:/shoose/train/labels"
 label_data = glob.glob(os.path.join(label_data_path, "*.txt"))
 label_move_path = r"D:/shoose01/label/"
 os.makedirs(label_move_path, exist_ok=True)
-출처: https://littleduck.tistory.com/20 [Duck:티스토리]
 ```
 
 ['D:/shoose/train/labels\\01b38abf41f1c6a2b28235262d4dbbff_jpg.rf.cfad93bb6623246b8acb9b5835419a17.txt', 
@@ -75,7 +74,7 @@ with open(text) as f:
     line = line.strip()
 ```
 
-![1](https://1drv.ms/i/c/bae70a53437eb109/IQP1hQOvPHxoQaJBrFNrXjJGAT4l54QnoUWLyEaJ-ULod4I?width=907&height=253)
+![1](https://i.ibb.co/PFqdSFK/YOLO-txt-remove-class-1.png)
 
 ```python
 with open(label_move_path + file_name, "a") as t:
@@ -88,7 +87,7 @@ with open(label_move_path + file_name, "a") as t:
 위 경로대로 파일을 txt파일을 새로 생성해 주었습니다.
 그리고 제가 필요한 class는 1이기 때문에 1로 시작하는 행만 가져왔습니다.
 
-![2](https://1drv.ms/i/c/bae70a53437eb109/IQO9ktx_HMC0Toq80h035JHQATSQF3KcjrjUvqyAf_1FTlM?width=1090&height=253)
+![2](https://i.ibb.co/X5CykWF/YOLO-txt-remove-class-2.png)
 
 이제 이 내용들을 각 파일에 입력을 해주기만 하면 됩니다.
  </br>
@@ -97,6 +96,6 @@ with open(label_move_path + file_name, "a") as t:
 txt파일에 입력할때 1을 3으로 바꿔서 입력하고 뒤의 값은 그대로 가져왔습니다.
 그리고 t.wirtef를 이용해서 작성해주면 끝이납니다.
 
-![3](https://1drv.ms/i/c/bae70a53437eb109/IQNMwjGbWahoT6juDJbaM4JEAXgyK15NaC7wktsBIZmoMkI?width=1090&height=253)
+![3](https://i.ibb.co/pyjdQvZ/YOLO-txt-remove-class-3.png)
 
-![4](./YOLO_txt_remove_class_4.png)
+![4](https://i.ibb.co/WG0xvLv/YOLO-txt-remove-class-4.png)

@@ -105,7 +105,7 @@ Deciaml = 228
 
 </br>
 
-![Attached Photo 1](./LBPH_LOCAL_BINARY_PATTERNS_HISTOGRAMS_1.png)
+![Attached Photo 1](https://i.ibb.co/3M26P2h/LBPH-LOCAL-BINARY-PATTERNS-HISTOGRAMS-1.png)
 
 </br>
 
@@ -118,7 +118,7 @@ Radius는 이진값을 생성하기 위한 중앙 픽셀 주변의 반경을 나
 값을 늘리면 이미지의 얇은 부분 모서리를 찾기 어려워할 수 있지만 이미지에서 많은 패턴을 찾을 수 있습니다.
 변수의 값을 늘리면 반경은 늘어나며 동시에 처리하는 속도도 느려지게 됩니다.
 
-![Attached Photo 2](./LBPH_LOCAL_BINARY_PATTERNS_HISTOGRAMS_2.webp)
+![Attached Photo 2](https://i.ibb.co/Zdt6ptB/LBPH-LOCAL-BINARY-PATTERNS-HISTOGRAMS-2.webp)
 
 **2.Neighbors(이웃 수)** </br>
 이진 수를 구하기 위한 이웃한 픽셀의 수입니다. default값으로 8이 설정되어 있습니다.
