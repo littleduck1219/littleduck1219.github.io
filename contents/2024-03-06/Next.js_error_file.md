@@ -6,11 +6,11 @@ summary: '개발자 모드에서는 잘 진행이 되었던 것이 빌드하는 
 thumbnail: './Next.js_error_file_3.png'
 ---
 
-![1](https://1drv.ms/i/c/bae70a53437eb109/IQM6jKQIbnFvS7GN4ZaEJpp_AT4Rzk0LqJSJeiglrZIVphA?width=647&height=89)
+![1](https://i.ibb.co/r02hKHD/Next-js-error-file-1.png)
 
-![2](https://1drv.ms/i/c/bae70a53437eb109/IQMBCtmj-lFWR6HSOmwsd42QAc3Aivspx1QbEQfBysWRAzs?width=647&height=297)
+![2](https://i.ibb.co/pjGvZps/Next-js-error-file-2.png)
 
-![3](https://1drv.ms/i/c/bae70a53437eb109/IQMBCtmj-lFWR6HSOmwsd42QAc3Aivspx1QbEQfBysWRAzs?width=647&height=297)
+![3](https://i.ibb.co/jMx4hF8/Next-js-error-file-3.png)
 
 개발자 모드에서는 잘 진행이 되었던 것이 빌드하는 과정에서부터 에러가 발생했습니다.
 
