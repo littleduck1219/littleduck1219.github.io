@@ -12,7 +12,7 @@ harr cascade를 이용하여 얼굴을 감지해 보도록 하겠습니다.
 
 데이터는 beautiful free image에서 한 장 가져왔습니다.
 
-![1](https://1drv.ms/i/c/bae70a53437eb109/IQONPnLsF7ITTKUWNkh119RpAd7CNJZeGFAT3Unvz90DvOA?width=1024)
+![1](https://i.ibb.co/85KwHBf/haar-cascades-face-detection-1.jpg)
 
 </center>
 
@@ -30,7 +30,7 @@ print(image.shape)
 
 <br>
 
-![2](https://1drv.ms/i/c/bae70a53437eb109/IQMXYhqhNz1MSbIv4wfhCEurAX8o0A3D00yVv7srJJL6P28?width=1024)
+![2](https://i.ibb.co/th2pVX1/haar-cascades-face-detection-2.png)
 
 사이즈는 4480, 6720으로 너무 크므로 조절하도록 하겠습니다.
 
@@ -58,7 +58,7 @@ cv2.waitKey(0)
 
 <br>
 
-![3](https://1drv.ms/i/c/bae70a53437eb109/IQNZVcg07XJJTKyaoLiNNIdcAd_XO7DAWbj8hKn5885aHFk?width=1024)
+![3](https://i.ibb.co/2ss0v6S/haar-cascades-face-detection-3.png)
 
 <center>이제 harr cascade를 이용해서 face detection을 해보도록 하겠습니다.</center><br>
 
@@ -87,17 +87,17 @@ detectMultiScale에는 인자 값들이 있는데.<br>
 scaleFactor은 피사체마다 카메라의 거리에 따라 크고 작게 나올 수 있는데 그것을 배경에서 타깃을 찾아서 <br>크고 작게 조절해 줍니다.<br>
 minNeighbors은 감지하는 물체의 주위에 감지되는 박스 중 최적의 박스를 찾아주는 기능입니다.<br>
 
-![4](https://1drv.ms/i/c/bae70a53437eb109/IQPPpGRkQeMxQaoKVGyTWWY1AfO635h0JRiC6kJLE2GGf-A?width=1024)
+![4](https://i.ibb.co/VmJNskw/haar-cascades-face-detection-4.png)
 
 변수 detections를 출력하면
 
-![5](https://1drv.ms/i/c/bae70a53437eb109/IQOg8nNWORSHQ4BVfSjN4IqoAWXYrilzTkl7Hx4wJmCnU3M?width=1024)
+![5](https://i.ibb.co/1qjstkx/haar-cascades-face-detection-5.png)
 
 각각의 좌표값이 나올 것입니다.
 
 이 좌표들을 이용하여 rectangle을 표현해 주면 끝납니다.<br> 표현해 줄 때는 흑백 이미지가 아닌 사이즈를 줄인 원본이미지를 사용할 것이므로 image를 입력하였습니다.
 
-![6](https://1drv.ms/i/c/bae70a53437eb109/IQP1EQ7YEgxVTbP1czh1psLEAezMuNS5J-2vevHD0LR90ls?width=1024)
+![6](https://i.ibb.co/M95QMsf/haar-cascades-face-detection-6.png)
 
 결과가 예쁘게 잘 나온 것을 확인할 수 있습니다.
 

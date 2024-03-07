@@ -16,7 +16,7 @@ thumbnail: './haar_cascades_eye_detection_2.png'
 
 </br>
 
-![1](https://1drv.ms/i/c/bae70a53437eb109/IQNPHpM0eS2pRZKD9Sc6aVspARh4hfTQ7ff09SNJhtjx9ZM?width=1280&height=853)
+![2](https://i.ibb.co/7xmD2Qr/haar-cascades-eye-detection-1.jpg)
 
 <p align="center">
     <small >https://www.fenews.co.uk/skills/dealing-with-communication-challenges-within-the-project-team/
@@ -63,6 +63,6 @@ scaleFactor, minNeighbors를 사용하였을때
 
 </br>
 
-![2](https://1drv.ms/i/c/bae70a53437eb109/IQM_HX25k_XQTJUd0FLGdScCAYCbfKO2FvWXH51fgqXwinU?width=1280&height=853)
+![2](https://i.ibb.co/rHcZcm1/haar-cascades-eye-detection-2.png)
 
 </br>
