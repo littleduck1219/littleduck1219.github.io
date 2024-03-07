@@ -12,7 +12,7 @@ GitHub Repository를 사용하는 댓글 기능이 있다는 것을 찾았고 �
 
 먼저 utterance에 들어가서 연결할 repo에 설치해줍니다.
 
-![1](https://1drv.ms/i/c/bae70a53437eb109/IQOq8Dvb35siQLjssOqTOlQ1AdHQEU3mxwU2kvO8tbcdH7I?width=503&height=150)
+![1](https://i.ibb.co/z677v2J/gitpages-comment-utterances-2.png)
 
 utterance : https://github.com/utterance<br>
 기술참고 : https://www.paulie.dev/posts/2022/08/how-to-use-utterances-with-react/<br>
@@ -76,6 +76,6 @@ ref.current가 null인 경우에 에러가 발생하므로 아래 코드를 추�
 if (ref.current === null) return;
 ```
 
-![3](https://1drv.ms/i/c/bae70a53437eb109/IQP2raUvAsynRq3zqocm3e9rATpkKfRoMDFTFHn68BYMd40?width=1024)
+![3](https://i.ibb.co/gSmGDX7/gitpages-comment-utterances-3.png)
 
-![4](https://1drv.ms/i/c/bae70a53437eb109/IQNxYno68HiTSbrL69Psj6pJAUI9NlnEwxcXYQaAIPmBW1o?width=1272&height=478)
+![4](https://i.ibb.co/dsvdrZ6/gitpages-comment-utterances-4.png)

@@ -19,7 +19,7 @@ export const getClient = (() => {
 })();
 ```
 
-![React_Query-Caching_1](https://github.com/littleduck1219/littleduck1219.github.io/assets/107936957/635396df-c38e-4840-9a25-1573737720fe)
+![1](https://i.ibb.co/HBQZ6CW/React-Query-Caching-1.gif)
 
 defaultoption을 통해 캐쉬를 사용하여 데이터를 일정 시간동안 저장하는 기능을 사용하였습니다.
 
@@ -44,7 +44,7 @@ export const getClient = (() => {
 })();
 ```
 
-![React_Query-Caching_2](https://github.com/littleduck1219/littleduck1219.github.io/assets/107936957/5567a5a6-ed9a-401e-b5fa-06745558d7b1)
+![2](https://i.ibb.co/1Rp25Sq/React-Query-Caching-2.gif)
 
 다음은 적용한 Query 옵션입니다.
 

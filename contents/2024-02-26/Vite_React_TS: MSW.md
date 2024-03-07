@@ -131,9 +131,9 @@ if (process.env.NODE_ENV === 'development') {
 vite의 경우 환경변수가 틀리기 때문에 다르게 적용시켜 줬습니다. 자세한 내용은 공식문서에서 확인하세요
 https://ko.vitejs.dev/guide/env-and-mode.html
 
-![1](https://1drv.ms/i/c/bae70a53437eb109/IQNYh2ZuRt3GQbs9SH2D_7HgAfQ208a43yq1C42gw9CDBKs?width=1024)
+![1](https://i.ibb.co/2qxzNGm/Vite-React-TS-MSW-1.png)
 
 <span style="color:red; font-weight:bold;">[MSW] Mocking enabled.</span>
 라는 메시지와 함께 데이터요청이 정상적으로 이뤄진 것을 확인할 수 있습니다.
 
-![2](https://1drv.ms/i/c/bae70a53437eb109/IQPMfPa_u3c5RLhrp3hVZOofATUJiwOgW5A2LYTXEqH1ehY?width=1024)
+![2](https://i.ibb.co/7Y9pGTY/Vite-React-TS-MSW-2.png)

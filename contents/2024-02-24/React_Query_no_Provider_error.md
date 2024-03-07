@@ -8,7 +8,7 @@ thumbnail: './React_Query_no_Provider_error_1.png'
 
 vite를 사용해서 React App을 빌드하였고, react-query를 사용하여 fake shopping API를 fetch하는데 오류가 발생하였습니다.
 
-![1](./React_Query_no_Provider_error_1.png)
+![1](https://i.ibb.co/wzkS39D/React-Query-no-Provider-error-1.png)
 
 에러 내용으로는 QueryClient, QueryClientProvider 을 하나 이상 사용해야한다? 라는 내용이였습니다.
 하지만 root file에 이미 모든 작업을 마쳤었고 데이터도 QueryClient와 Provider에 마운트 되는 것과, API데이터를 받아오는 것을 확인하였습니다.
@@ -86,4 +86,4 @@ const Layout: React.FC = () => {
 };
 ```
 
-![2](https://1drv.ms/i/c/bae70a53437eb109/IQOPDQbNVgRkSqFFGyLzyDvEAaJKezciCPqC9VZm4BNSJ_w?width=1280&height=731)
+![2](https://i.ibb.co/BgQYv3N/React-Query-no-Provider-error-2.png)

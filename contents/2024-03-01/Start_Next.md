@@ -6,7 +6,7 @@ summary: 'Next.js 는 React 기반의 오픈 소스 프레임워크로, SSR(서�
 thumbnail: './Start_Next_1.png'
 ---
 
-![1](https://1drv.ms/i/c/bae70a53437eb109/IQMJIQhtyjfXTbaOSh_varHRARqqO0WwDeWDjoNX_xMqtW8?width=1024)
+![1](https://i.ibb.co/5kJtMd2/Start-Next-1.png)
 
 Next.js 는 React 기반의 오픈 소스 프레임워크로, SSR(서버 사이드 렌더링), SSG(정적 사이트 생성), CSR(클라이언트 사이드 렌더링)을 지원하여 높은 성능과 SEO 친화적인 웹 애플리케이션을 빠르게 구축할 수 있게 해 줍니다. Next.js는 JavaScript, TypeScript를 지원하며, 빌트인 라우팅, 페이지 기반 라우팅 시스템, 코트 스플리팅, API 라우트, CSS 모듈과 같은 다양한 기능을 제공합니다.
 
@@ -46,23 +46,23 @@ Next.js 또한 비슷한 CLI를 사용합니다. TypeScript 옵션을 사용해�
 yarn create next-app
 ```
 
-![2](https://1drv.ms/i/c/bae70a53437eb109/IQMPTs6oQb9BSpdTCP4K07iFAaGPsLiGX83JsYNTd2EMlDo?width=1024)
+![2](https://i.ibb.co/7jyrkMy/Start-Next-2.png)
 
 ts와 같이 CLI에서 TypeScript를 사용한다고 명시해 주는 방법도 있지만 이렇게 생성 시에 물어보니 편한 방법으로 진행하면 됩니다.
 
-![3](https://1drv.ms/i/c/bae70a53437eb109/IQPZm_LcPhynRL8txbUcCVmuAQdOfZqbei3C9zR9c2wmzQc?width=1024)
+![3](https://i.ibb.co/H4x42Vz/Start-Next-3.png)
 
 ESLint 사용여부설정
 
-![4](https://1drv.ms/i/c/bae70a53437eb109/IQNuzvgGXJVERJU2I74QtXOHAZqZj9-voWBKruHnEt4X_rQ?width=1024)
+![4](https://i.ibb.co/fdpM8pt/Start-Next-4.png)
 
 TailWind CSS 사요 여부 설정 Yes를 선택하면 자동으로 구성 설정을 다 적용해 줍니다.
 
-![5](https://1drv.ms/i/c/bae70a53437eb109/IQOH-PDRlnqWRJ1D7HJfwi3lAWpKy3rdUb64w5pZu2z8vpk?width=1024)
+![5](https://i.ibb.co/bRFrnqP/Start-Next-5.png)
 
 src 디렉터리를 사용할 건지 물어봅니다.
 
-![6](https://1drv.ms/i/c/bae70a53437eb109/IQONVI3mWukJRrnCr-Szj_AwAWwLgaQnTRDYQUykeERPiAI?width=1024)
+![6](https://i.ibb.co/ggRJJPG/Start-Next-6.png)
 
 Next.js 13 버전에서는 router 구성을 pages폴더가 아닌 app에서 바로 설정하는 것으로 바뀌었습니다.
 
@@ -82,9 +82,9 @@ app/test/testFile/page.tsx처럼 모든 파일이름을 page.tsx로 정해진 �
 
 권장한다고는 하지만 이미 Next.js로 서비스를 제공하고 있는 기업들은 12 버전을 사용하므로 12 버전은 기본으로 알고 있어야 될 것 같습니다.
 
-![7](https://1drv.ms/i/c/bae70a53437eb109/IQMefilMG1cFT4aMqDLvgxtnAWRQWEpt4n3xCVtY1FAdvh8?width=1024)
+![7](https://i.ibb.co/Hh4b3m3/Start-Next-7.png)
 
-![8](https://1drv.ms/i/c/bae70a53437eb109/IQOP42iBV1LCTKqzR7p40T9bAcIJyfICfE6CpaJo0gUEgrw?width=1024)
+![8](https://i.ibb.co/tzjNTBT/Start-Next-8.png)
 
 이처럼 import 시에. 을 사용하는 것이 아닌 @를 사용하여 경로 표시를 하는데 이걸 커스텀하겠냐고 하는 옵션인 것 같습니다.
 
