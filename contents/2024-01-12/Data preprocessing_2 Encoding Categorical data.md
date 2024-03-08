@@ -1,7 +1,7 @@
 ---
 date: '2024-01-12'
 title: 'Data preprocessing_2 Encoding Categorical data'
-categories: ['Python', 'DataScience', 'CNN']
+categories: ['Python', 'DataScience']
 summary: 'categorycal data encoding을 하여 처리하는 방법을 써보도록 하겠습니다.'
 thumbnail: './Data preprocessing_2 Encoding Categorical data_1.png'
 ---

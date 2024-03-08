@@ -1,7 +1,7 @@
 ---
 date: '2024-01-11'
 title: 'Data preprocessing_1 missing data'
-categories: ['Python', 'DataScience', 'CNN']
+categories: ['Python', 'DataScience']
 summary: '데이터 전처리 중 데이터가 빈경우 채워 넣는 법을 다루겠습니다.'
 thumbnail: './Data preprocessing_1 missing data_1.png'
 ---
