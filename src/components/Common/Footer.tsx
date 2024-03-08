@@ -4,7 +4,6 @@ import * as style from './style.Footer';
 export default function Footer(): JSX.Element {
   return (
     <style.FooterWrapper>
-      <p>© 2024 Develop By Duck.</p>
       <style.MakeByWrapper>
         <span>Made By </span>
         <style.FooterImageWrapper>
@@ -13,6 +12,7 @@ export default function Footer(): JSX.Element {
           <style.FooterImage src="/github.png" alt="github" />
         </style.FooterImageWrapper>
       </style.MakeByWrapper>
+      <p>© 2024 Develop By Duck.</p>
     </style.FooterWrapper>
   );
 }
