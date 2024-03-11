@@ -1,6 +1,6 @@
 ---
 date: '2024-03-11'
-title: 'Next-Auth 환경변수 생성'
+title: '브라우저 렌더링이란?'
 categories: ['Web', 'cs', 'frontend']
 summary: '브라우저 렌더링에 대해서 알아보았습니다.'
 thumbnail: './default.png'
