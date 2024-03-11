@@ -13,7 +13,7 @@ thumbnail: './default.png'
 - **HTML Parsing**<br>
 브라우저는 HTML 코드를 토큰화하여 DOM 트리를 만듭니다. DOM 트리는 웹 페이지의 구조를 나타내는 트리 구조입니다. 각 노드는 HTML 요소를 나타내며, 노드의 속성과 자식 노드를 통해 요소의 정보를 가지고 있습니다.
 
-> 💡tip **DOM 트리** DOM 트리(Document Object Model Tree)는 웹 페이지의 구조를 나타내는 트리 구조입니다. 웹 브라우저는 HTML 코드를 파싱하여 DOM 트리를 만들고, 이를 통해 웹 페이지를 표시하고 조작합니다.
+> 💡tip **DOM 트리** : DOM 트리(Document Object Model Tree)는 웹 페이지의 구조를 나타내는 트리 구조입니다. 웹 브라우저는 HTML 코드를 파싱하여 DOM 트리를 만들고, 이를 통해 웹 페이지를 표시하고 조작합니다.
 
 - **CSS Parsing**<br>
 브라우저는 CSS 코드를 토큰화하여 CSSOM 트리를 만듭니다. CSSOM 트리는 웹 페이지의 스타일 정보를 나타내는 트리 구조입니다. 각 노드는 CSS 규칙을 나타내며, 노드의 속성을 통해 규칙의 선택자와 스타일 정보를 가지고 있습니다.
