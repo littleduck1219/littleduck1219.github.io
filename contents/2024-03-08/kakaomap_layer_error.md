@@ -1,7 +1,7 @@
 ---
 date: '2024-03-08'
 title: 'kakao map 지도 겹침현상'
-categories: ['Web', 'React', 'error']
+categories: ['Web', 'React', 'Error']
 summary: 'Next Auth를 통해 로그인이 필요한 페이지는 어떻게 구현하는지 궁금했는데 그것에 대해서 알아보았습니다.'
 thumbnail: './kakaomap_layer_error_2.png'
 ---

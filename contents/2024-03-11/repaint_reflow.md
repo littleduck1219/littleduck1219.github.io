@@ -3,7 +3,7 @@ date: '2024-03-11'
 title: 'Reflow와 Repaint가 실행되는 시점?'
 categories: ['Web', 'cs', 'frontend']
 summary: 'Repaint와 Reflow는 웹 브라우저에서 웹 페이지를 표시하는 과정에서 발생하는 두 가지 중요한 단계입니다.'
-thumbnail: './default.png'
+thumbnail: '../../static/default.png'
 ---
 
 Repaint와 Reflow는 웹 브라우저에서 웹 페이지를 표시하는 과정에서 발생하는 두 가지 중요한 단계입니다.
