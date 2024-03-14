@@ -1,6 +1,6 @@
 ---
 date: '2024-03-05'
-title: 'NextAuth.png'
+title: 'NextAuth'
 categories: ['Web', 'React', 'Next.JS']
 summary: 'Next에서 Data를 다루는 방법에 대해서 알아보았습니다.'
 thumbnail: './NextAuth.png'

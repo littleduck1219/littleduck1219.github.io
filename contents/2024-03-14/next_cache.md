@@ -3,10 +3,10 @@ date: '2024-03-14'
 title: '클로저'
 categories: ['Web', 'React', 'Next.JS']
 summary: 'Next.js에는 Cache계층이 존재 합니다.'
-thumbnail: '../../static/Next.js.png'
+thumbnail: '../../static/Next_js.png'
 ---
 
-![1](../../static/Next.js.png)
+![1](../../static/Next_js.png)
 
 Next.js환경 프로젝트진행중에 새로운 데이터를 추가했음에도 리스트에 반영이 안되고 새로고침을 해야 반영되는 현상이 있어 해결하고자 알아보았습니다.
 
