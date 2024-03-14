@@ -3,10 +3,10 @@ date: '2024-03-03'
 title: 'Next.js::getStaticPaths'
 categories: ['Web', 'React', 'Next.JS']
 summary: 'Next에서 Data를 다루는 방법에 대해서 알아보았습니다.'
-thumbnail: './Next.js::getStaticPaths_1.png'
+thumbnail: '../../static/Next.js.png'
 ---
 
-![1](./Next.js::getStaticPaths_1.png)
+![1](../../static/Next.js.png)
 
 Next.js의 getStaticPaths 함수는 정적 생성을 사용할 때 동적 라우트를 가진 페이지에 필요합니다.<br>
 이는 포스트 페이지의 id 값을 경로를 가지는 것 처럼 /posts/[id]와 같은 경로의 [id] 부분이 고정되어 있지 않는 것을 말합니다.

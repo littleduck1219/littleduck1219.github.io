@@ -3,10 +3,10 @@ date: '2024-03-04'
 title: 'Next.js::API Router'
 categories: ['Web', 'React', 'Next.JS']
 summary: 'Next에서 routing에 대해서 알아보았습니다.'
-thumbnail: './Next.js::API_Router_1.png'
+thumbnail: '../../static/Next.js.png'
 ---
 
-![1](./Next.js::API_Router_1.png)
+![1](../../static/Next.js.png)
 
 Next.js에서는 API엔드포인트를 생성할 수 있는 기능을 제공하여 이로인해 Next.js 애플리케이션 내에서 백엔드 로직을 실행할 수 있게 해주며, 다른 서버없이 API를 구축하고 관리할 수 있습니다.
 

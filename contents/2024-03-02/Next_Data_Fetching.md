@@ -3,10 +3,10 @@ date: '2024-03-02'
 title: 'Next.js::Data Fetching'
 categories: ['Web', 'React', 'Next.JS']
 summary: 'Next에서 Data를 다루는 방법에 대해서 알아보았습니다.'
-thumbnail: './Next_Data_Fetching_1.png'
+thumbnail: '../../static/Next.js.png'
 ---
 
-![1](./Next_Data_Fetching_1.png)
+![1](../../static/Next.js.png)
 
 서버 데이터를 가져와 페이지를 렌더링 하거나, 클라이언트 데이터를 가져와 동적으로 페이지를 업데이트할 수 있음<br>
 Doc: https://nextjs.org/docs/pages/building-your-application/data-fetching

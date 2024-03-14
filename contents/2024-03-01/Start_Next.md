@@ -3,10 +3,10 @@ date: '2024-03-01'
 title: 'Next.JS 시작하기'
 categories: ['Web', 'React', 'Next.JS']
 summary: 'Next.js 는 React 기반의 오픈 소스 프레임워크로, SSR(서버 사이드 렌더링), SSG(정적 사이트 생성), CSR(클라이언트 사이드 렌더링)을 지원하여 높은 성능과 SEO 친화적인 웹 애플리케이션을 빠르게 구축할 수 있게 해 줍니다.'
-thumbnail: './Start_Next_1.png'
+thumbnail: '../../static/Next.js.png'
 ---
 
-![1](https://i.ibb.co/5kJtMd2/Start-Next-1.png)
+![1](../../static/Next.js.png)
 
 Next.js 는 React 기반의 오픈 소스 프레임워크로, SSR(서버 사이드 렌더링), SSG(정적 사이트 생성), CSR(클라이언트 사이드 렌더링)을 지원하여 높은 성능과 SEO 친화적인 웹 애플리케이션을 빠르게 구축할 수 있게 해 줍니다. Next.js는 JavaScript, TypeScript를 지원하며, 빌트인 라우팅, 페이지 기반 라우팅 시스템, 코트 스플리팅, API 라우트, CSS 모듈과 같은 다양한 기능을 제공합니다.
 
