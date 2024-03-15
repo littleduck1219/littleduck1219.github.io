@@ -66,6 +66,8 @@ export default function IndexPage({
     setIsMobile(isMobileQuery);
   }, [isMobileQuery, setIsMobile]);
 
+  console.log(this as any);
+
   return (
     <Template
       title={title}
