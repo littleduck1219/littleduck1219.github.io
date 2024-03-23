@@ -3,10 +3,10 @@ date: '2024-02-22'
 title: 'prisma, superbase seed 설정'
 categories: ['Web', 'React', 'Prisma', 'Superbase']
 summary: '데이터 캐시 무효화고 최신화 경험'
-thumbnail: './prisma_superbase_1.png'
+thumbnail: '../../static/prisma_superbase.png'
 ---
 
-![1](./prisma_superbase_1.png)
+![1](../../static/prisma_superbase.png)
 
 Prisma는 Node.js, Typescript 애플리케이션을 위한 오픈 소스 데이터베이스 ORM입니다. 데이터 베이스 스키마를 정의하고, 데이터베이스 마이그레이션을 수행하여 쿼리를 작성하고 실행하는데 도움을 줍니다.
 `ORM(Object-relational-mapping)`은 DB를 객체로 매핑하여 자동으로 SQL을 생성해 주는 도구입니다. 최근에는 NoSQL 데이터베이스도 지원하기 시작하였습니다.
