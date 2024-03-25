@@ -1,6 +1,6 @@
 ---
 date: '2024-03-14'
-title: '클로저'
+title: 'Next cache'
 categories: ['Web', 'React', 'Next.JS']
 summary: 'Next.js에는 Cache계층이 존재 합니다.'
 thumbnail: '../../static/Next_js.png'
