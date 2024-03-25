@@ -1,7 +1,7 @@
 ---
 date: '2024-03-24'
 title: 'fvm으로 Flutter 버전 관리하기'
-categories: ['Web', 'React', 'Next.JS', 'Tanstack Query']
+categories: ['App', 'Flutter']
 summary: '데이터 캐시 무효화고 최신화 경험'
 thumbnail: '../../static/flutter.jpeg'
 ---
