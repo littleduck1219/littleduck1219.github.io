@@ -1,7 +1,7 @@
 ---
 date: '2024-03-19'
 title: 'Event'
-categories: ['Web', 'cs', 'frontend']
+categories: ['Web', 'CS', 'Frontend']
 summary: '이벤트가 전파되는 이벤트 버블링과 이벤트 캡처링에 대해서 알아보았습니다.'
 thumbnail: '../../static/js.png'
 ---

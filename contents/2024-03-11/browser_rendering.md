@@ -1,7 +1,7 @@
 ---
 date: '2024-03-11'
 title: '브라우저 렌더링이란?'
-categories: ['Web', 'cs', 'frontend']
+categories: ['Web', 'CS', 'Frontend']
 summary: '브라우저 렌더링에 대해서 알아보았습니다.'
 thumbnail: '../../static/default.png'
 ---

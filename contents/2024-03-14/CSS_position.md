@@ -1,7 +1,7 @@
 ---
 date: '2024-03-14'
 title: 'CSS:Position'
-categories: ['Web', 'cs', 'frontend']
+categories: ['Web', 'CS', 'Frontend']
 summary: 'CSS의 position 속성은 요소의 위치를 지정하는 데 사용됩니다.'
 thumbnail: './css_position.jpeg'
 ---

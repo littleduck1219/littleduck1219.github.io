@@ -1,7 +1,7 @@
 ---
 date: '2024-03-17'
 title: 'JavaScript의 비동기'
-categories: ['Web', 'cs', 'frontend']
+categories: ['Web', 'CS', 'Frontend']
 summary: 'JavaScript는 객체 기반의 스크립트 프로그래밍 언어로, 주로 웹 페이지의 동적 기능을 구현하는 데 사용됩니다. '
 thumbnail: '../../static/js.png'
 ---

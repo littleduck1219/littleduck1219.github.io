@@ -1,7 +1,7 @@
 ---
 date: '2024-03-09'
 title: 'prisma 스키마 정의하기'
-categories: ['Web', 'React', 'Next.JS', 'prisma']
+categories: ['Web', 'React', 'Next.JS', 'Prisma']
 summary: '데이터 베이스를 연결하기위해 prisma를 연결해 보았습니다.'
 thumbnail: './prisma_schema_1.jpeg'
 ---

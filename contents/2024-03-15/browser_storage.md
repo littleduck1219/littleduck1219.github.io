@@ -1,7 +1,7 @@
 ---
 date: '2024-03-15'
 title: 'Browser Storage'
-categories: ['Web', 'cs', 'frontend']
+categories: ['Web', 'CS', 'Frontend']
 summary: '브라우저에는 다양한 저장소가 존재합니다.'
 thumbnail: '../../static/default.png'
 ---

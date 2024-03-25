@@ -1,7 +1,7 @@
 ---
 date: '2024-03-12'
 title: '주소창에 주소를 입력했을시'
-categories: ['Web', 'cs', 'frontend']
+categories: ['Web', 'CS', 'Frontend']
 summary: '주소창에 주소를 입력하면 어떤 과정을 통해서 사이트를 찾아가는지 알아보았습니다.'
 thumbnail: '../../static/default.png'
 ---

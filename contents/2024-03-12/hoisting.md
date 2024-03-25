@@ -1,7 +1,7 @@
 ---
 date: '2024-03-12'
 title: 'hoisting'
-categories: ['Web', 'cs', 'frontend']
+categories: ['Web', 'CS', 'Frontend']
 summary: '호이스팅에 대해 알아 보았습니다.'
 thumbnail: '../../static/js.png'
 ---

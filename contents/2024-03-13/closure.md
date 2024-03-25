@@ -1,7 +1,7 @@
 ---
 date: '2024-03-13'
 title: '클로저'
-categories: ['Web', 'cs', 'frontend']
+categories: ['Web', 'CS', 'Frontend']
 summary: '클로저(Closure)는 자바스크립트의 중요한 개념 중 하나로, 함수와 그 함수가 선언된 렉시컬 환경(Lexical Environment)과의 조합을 가리킵니다. '
 thumbnail: '../../static/js.png'
 ---

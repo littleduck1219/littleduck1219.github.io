@@ -1,7 +1,7 @@
 ---
 date: '2024-03-14'
 title: 'RestAPI'
-categories: ['Web', 'cs', 'frontend']
+categories: ['Web', 'CS, 'Frontend']
 summary: 'REST(Representational State Transfer)는 웹 서비스의 아키텍처 스타일 중 하나 입니다.'
 thumbnail: '../../static/default.png'
 ---

@@ -1,7 +1,7 @@
 ---
-date: '2024-02-20'
+date: '2024-02-19'
 title: 'Query Key Error:TanStack Query'
-categories: ['Web', 'Tanstack Query', 'error']
+categories: ['Web', 'Tanstack Query', 'Error']
 summary: 'query key error가 발생했습니다.'
 thumbnail: './tanstack_query_query_key_error.png'
 ---
