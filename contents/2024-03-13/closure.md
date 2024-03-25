@@ -3,7 +3,7 @@ date: '2024-03-13'
 title: '클로저'
 categories: ['Web', 'cs', 'frontend']
 summary: '클로저(Closure)는 자바스크립트의 중요한 개념 중 하나로, 함수와 그 함수가 선언된 렉시컬 환경(Lexical Environment)과의 조합을 가리킵니다. '
-thumbnail: '../../static/default.png'
+thumbnail: '../../static/js.png'
 ---
 
 클로저는 함수와 함수가 선언된 렉시컬 환경 (lexical environment)의 조합입니다. 렉시컬 환경은 함수가 생성된 시점의 유효 범위 내에 있는 모든 지역 변수로 구성됩니다. 즉, 클로저는 내부 함수가 외부 함수에 있는 상태에 접근할 수 있는 권한을 부여합니다.
