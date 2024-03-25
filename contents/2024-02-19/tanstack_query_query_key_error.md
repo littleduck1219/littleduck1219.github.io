@@ -24,3 +24,5 @@ const { isLoading, isError, data, refetch } = useQuery(
   getPhotoLists,
 );
 ```
+
+잘 되는 것을 확인 했습니다.
