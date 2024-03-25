@@ -1,7 +1,7 @@
 ---
 date: '2024-02-17'
 title: 'autoComplete:사용자 웹 접근성 향상'
-categories: ['Web', 'error']
+categories: ['Web', 'Error']
 summary: '브라우저는 autocomplete 속성을 사용하여 사용자가 이전에 입력한 값을 기억하고 자동으로 채워 넣을 수 있습니다.'
 thumbnail: './auto_complete_1.png'
 ---

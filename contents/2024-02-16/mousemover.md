@@ -1,8 +1,8 @@
 ---
-date: '2024-02-16mouse'
-title: 'autoComplete:사용자 웹 접근성 향상'
-categories: ['Web', 'error']
-summary: '브라우저는 autocomplete 속성을 사용하여 사용자가 이전에 입력한 값을 기억하고 자동으로 채워 넣을 수 있습니다.'
+date: '2024-02-16'
+title: 'mouse over : Rerendering'
+categories: ['Web', 'Interactive']
+summary: '마우스의 좌표를 인식해서 마우스를 따라오는 나비가 나타나는 기능을 구현하였습니다.'
 thumbnail: './mouseover_1.png'
 ---
 
