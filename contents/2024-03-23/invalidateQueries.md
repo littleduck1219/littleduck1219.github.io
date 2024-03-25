@@ -1,7 +1,7 @@
 ---
 date: '2024-03-23'
 title: 'Tanstack Query로 데이터 상태 변경하기'
-categories: ['Web', 'React', 'Next.JS']
+categories: ['Web', 'React', 'Next.JS', 'Tanstack Query']
 summary: '데이터 캐시 무효화고 최신화 경험'
 thumbnail: './invalidateQueries.png'
 ---
