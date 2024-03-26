@@ -1,7 +1,7 @@
 ---
 date: '2024-03-13'
 title: 'margin, padding'
-categories: ['Web', 'CS', 'Frontend']
+categories: ['Web', 'CS', 'Frontend', 'CSS']
 summary: '마진(Margin)과 패딩(Padding)은 CSS에서 박스 모델(Box Model)을 구성하는 중요한 속성들입니다.'
 thumbnail: './margin_padding.png'
 ---

@@ -1,7 +1,7 @@
 ---
 date: '2024-03-20'
 title: 'Typescript'
-categories: ['Web', 'CS', 'Frontend']
+categories: ['Web', 'CS', 'Frontend', 'JavaScript']
 summary: '자바스크립트에 정적 타입을 추가한 슈퍼셋'
 thumbnail: '../../static/js.png'
 ---

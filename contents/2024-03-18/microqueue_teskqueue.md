@@ -1,7 +1,7 @@
 ---
 date: '2024-03-18'
 title: '마이크로태스크 큐, 태스크 큐'
-categories: ['Web', 'CS', 'Frontend']
+categories: ['Web', 'CS', 'Frontend', 'JavaScript']
 summary: '마이크로태스크 큐(Microtask Queue)와 태스크 큐(Task Queue)는 자바스크립트 엔진에서 비동기 작업을 관리하기 위해 사용되는 큐입니다. '
 thumbnail: '../../static/js.png'
 ---
