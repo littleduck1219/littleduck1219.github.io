@@ -1,7 +1,7 @@
 ---
 date: '2024-03-26'
 title: '실행 context'
-categories: ['Web', 'CS', 'Frontend']
+categories: ['Web', 'CS', 'Frontend', 'JavaScript']
 summary: '실행 컨텍스트(Execution Context)는 JavaScript 코드가 실행될 때 생성되는 환경을 의미합니다. '
 thumbnail: '../../static/js.png'
 ---
