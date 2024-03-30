@@ -16,6 +16,9 @@ export default function Template({
     <style.Container>
       <Helmet>
         <title>{title}</title>
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
