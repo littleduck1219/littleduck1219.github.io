@@ -1,7 +1,7 @@
 ---
 date: '2024-03-12'
 title: 'hoisting'
-categories: ['Web', 'CS', 'Frontend', 'JavaScript']
+categories: ['Web', 'CS', 'JavaScript']
 summary: '호이스팅에 대해 알아 보았습니다.'
 thumbnail: '../../static/js.png'
 ---
@@ -31,4 +31,5 @@ function hello() {
   console.log(hello);
 }
 ```
+
 호이스팅은 변수와 함수의 사용범위를 제한하고 예상치 못한 에러를 방지하는데 중요합니다.

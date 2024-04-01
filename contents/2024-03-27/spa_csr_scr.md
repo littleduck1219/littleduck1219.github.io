@@ -1,7 +1,7 @@
 ---
 date: '2024-03-27'
 title: 'SPA, CSR, SSR'
-categories: ['Web', 'CS', 'Frontend']
+categories: ['Web', 'CS']
 summary: '실행 컨텍스트(Execution Context)는 JavaScript 코드가 실행될 때 생성되는 환경을 의미합니다. '
 thumbnail: '../../static/default.png'
 ---
