@@ -2,7 +2,7 @@
 date: '2024-03-29'
 title: 'Node와 Express'
 categories: ['Web', 'Back-end', 'JavaScript', 'Node']
-summary: '실행 컨텍스트(Execution Context)는 JavaScript 코드가 실행될 때 생성되는 환경을 의미합니다. '
+summary: 'Node와 Express'
 thumbnail: '../../static/node.jpeg'
 ---
 
