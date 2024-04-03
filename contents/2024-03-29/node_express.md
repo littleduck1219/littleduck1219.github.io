@@ -1,7 +1,7 @@
 ---
 date: '2024-03-29'
 title: 'Node와 Express'
-categories: ['Web', 'JavaScript', 'Node']
+categories: ['Web', 'Node']
 summary: 'Node와 Express'
 thumbnail: '../../static/node.jpeg'
 ---

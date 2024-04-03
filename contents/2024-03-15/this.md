@@ -3,7 +3,7 @@ date: '2024-03-15'
 title: 'this'
 categories: ['Web', 'CS', 'JavaScript']
 summary: 'JavaScript에서의 this는 현재 실행 중인 코드에서 사용되는 객체를 참조하는 특수한 키워드입니다. '
-thumbnail: '../../static/default.png'
+thumbnail: '../../static/js.png'
 ---
 
 JavaScript에서의 this는 현재 실행 중인 코드에서 사용되는 객체를 참조하는 특수한 키워드입니다. this는 실행 컨텍스트에 따라서 동적으로 결정됩니다.
