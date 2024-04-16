@@ -6,7 +6,7 @@ summary: '프론트엔드 기술 면접 답안 #2'
 thumbnail: '../../static/default.png'
 ---
 
-## 1. Virtual DOM과 Real DOM의 차이
+## 1. Virtual DOM과 Real DOM의 차이.
 Real DOM은 웹 페이지의 구조를 나타내는 실제 HTML요소들의 트리입니다. 브라우저가 HTML 문서를 파싱하고 렌더링할 때 생성 됩니다. Real DOM은 브라우저에서 실제로 렌더링되는 구조로, HTML요소의 변경이 발생하면 브라우저가 전체 구조를 다시 그리고 렌더링합니다. 이러한 작업 구조는 성능을 저하시킬 수 있습니다.
 
 Virtual DOM은 Real DOM의 복사본으로, 메모리에 존재합니다. 상태 변화를 추적하고 변경된 부분만을 실제 DOM에 반영하여 불필요한 렌더링을 최소화 합니다. Virtual DOM은 상태 변화에 빠른 반응성을 제공하고, 성능을 향상 시키고 높은 유지보수성을 제공합니다. React와 같은 라이브러리에서 사용합니다.
